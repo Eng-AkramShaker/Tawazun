@@ -4,8 +4,17 @@
 
 import 'package:flutter/material.dart';
 
+// Costume AppBar -------------------------------------------------------------
+
 AppBar C_AppBar() {
   return AppBar(
+    titleSpacing: 00.0,
+    // centerTitle: true,
+    toolbarHeight: 70,
+    // toolbarOpacity: 0.8,
+    // shape: const RoundedRectangleBorder(),
+    elevation: 0.00,
+    backgroundColor: Colors.transparent,
     title: Container(
       margin: EdgeInsets.only(top: 20),
       height: 50,
@@ -39,12 +48,5 @@ AppBar C_AppBar() {
         ],
       ),
     ),
-    titleSpacing: 00.0,
-    // centerTitle: true,
-    toolbarHeight: 70,
-    // toolbarOpacity: 0.8,
-    // shape: const RoundedRectangleBorder(),
-    elevation: 0.00,
-    backgroundColor: Colors.transparent,
   );
 }
