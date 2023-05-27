@@ -16,9 +16,6 @@ class form_F020 extends StatelessWidget {
           body: Container(
             width: double.infinity,
             height: double.infinity,
-            child: Column(
-              children: [],
-            ),
           ),
         ),
       ),
