@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
-import 'F020/View/f020.dart';
+import 'F020/View/Pages/f020.dart';
 
 void main() {
   runApp(const MyApp());
