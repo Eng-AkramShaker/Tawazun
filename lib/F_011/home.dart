@@ -5,17 +5,21 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'controller.dart';
 
-class form_F020 extends StatelessWidget {
+class Home_F020 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<Controler_F011>(
       init: Controler_F011(),
       builder: (controller) => SafeArea(
         child: Scaffold(
+          // Costume AppBar
           appBar: C_AppBar(),
           body: Container(
             width: double.infinity,
             height: double.infinity,
+            child: Column(
+              children: [],
+            ),
           ),
         ),
       ),
