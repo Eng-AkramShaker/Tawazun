@@ -3,10 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
-
-import 'F_011/home.dart';
-import 'form024-form034/f027/f027.dart';
-
+import 'form_024-To_034/f027/f027.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,9 +37,7 @@ class MyApp extends StatelessWidget {
       title: 'Tawazun',
       //
 
-
       home: F027(),
-
     );
   }
 }
