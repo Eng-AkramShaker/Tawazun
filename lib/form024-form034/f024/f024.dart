@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../widgets024=034.dart';
 import 'f024Controller.dart';
 
 class F024 extends StatelessWidget {
@@ -18,30 +19,15 @@ class F024 extends StatelessWidget {
           backgroundColor: Colors.white,
           body: ListView(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    height: 75.0,
-                    width: screenWidth / 4,
-                    child: Image.asset('assets/images/log.png'),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 20.0),
-                    child: Text(
-                      "Acknowledgement receipt for equipment form",
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromRGBO(33, 33, 33, 1)),
-                    ),
-                  ),
-                ],
-              ),
+              TopPage(
+                  screenWidth: screenWidth,
+                  title: 'Acknowledgement receipt for equipment form'),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   text_widget(
+                    horizontalPadding: 0.0,
+                    verticalPadding: 0.0,
                     text: 'Employee Name:',
                     size: 18.0,
                   ),
@@ -51,10 +37,14 @@ class F024 extends StatelessWidget {
                     type: TextInputType.name,
                   ),
                   text_widget(
+                    horizontalPadding: 0.0,
+                    verticalPadding: 0.0,
                     text: 'Date: ',
                     size: 18.0,
                   ),
                   text_widget(
+                    horizontalPadding: 0.0,
+                    verticalPadding: 0.0,
                     text: '${controller.date}',
                     size: 18.0,
                   ),
@@ -62,6 +52,8 @@ class F024 extends StatelessWidget {
               ),
               Center(
                 child: text_widget(
+                  horizontalPadding: 0.0,
+                  verticalPadding: 0.0,
                   text:
                       'I hereby Acknowledgement receipt and assignment of the following property:',
                   size: 18.0,
@@ -80,7 +72,11 @@ class F024 extends StatelessWidget {
                         controller.update();
                       },
                     ),
-                    text_widget(text: 'Office / building key', size: 16.0)
+                    text_widget(
+                        horizontalPadding: 0.0,
+                        verticalPadding: 0.0,
+                        text: 'Office / building key',
+                        size: 16.0)
                   ],
                 ),
               ),
@@ -97,7 +93,10 @@ class F024 extends StatelessWidget {
                       },
                     ),
                     text_widget(
-                        text: 'Identification Card Number:  ', size: 16.0),
+                        horizontalPadding: 0.0,
+                        verticalPadding: 0.0,
+                        text: 'Identification Card Number:  ',
+                        size: 16.0),
                     text_field_widget(
                         type: TextInputType.number,
                         textController: controller.cardNumber,
@@ -118,6 +117,8 @@ class F024 extends StatelessWidget {
                       },
                     ),
                     text_widget(
+                        horizontalPadding: 0.0,
+                        verticalPadding: 0.0,
                         text: 'Cellular Phone (Inventory/Serial Number)   ',
                         size: 16.0),
                     text_field_widget(
@@ -140,6 +141,8 @@ class F024 extends StatelessWidget {
                       },
                     ),
                     text_widget(
+                        horizontalPadding: 0.0,
+                        verticalPadding: 0.0,
                         text: 'Lap-top Computer (Inventory/Serial Number)    ',
                         size: 16.0),
                     text_field_widget(
@@ -161,7 +164,11 @@ class F024 extends StatelessWidget {
                         controller.update();
                       },
                     ),
-                    text_widget(text: 'Uniform    ', size: 16.0),
+                    text_widget(
+                        horizontalPadding: 0.0,
+                        verticalPadding: 0.0,
+                        text: 'Uniform    ',
+                        size: 16.0),
                   ],
                 ),
               ),
@@ -177,7 +184,11 @@ class F024 extends StatelessWidget {
                         controller.update();
                       },
                     ),
-                    text_widget(text: 'Equipment (list):  ', size: 16.0),
+                    text_widget(
+                        horizontalPadding: 0.0,
+                        verticalPadding: 0.0,
+                        text: 'Equipment (list):  ',
+                        size: 16.0),
                   ],
                 ),
               ),
@@ -217,7 +228,11 @@ class F024 extends StatelessWidget {
                         controller.update();
                       },
                     ),
-                    text_widget(text: 'Other  ', size: 16.0),
+                    text_widget(
+                        horizontalPadding: 0.0,
+                        verticalPadding: 0.0,
+                        text: 'Other  ',
+                        size: 16.0),
                     text_field_widget(
                         type: TextInputType.number,
                         textController: controller.other,
@@ -229,6 +244,8 @@ class F024 extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 400.0),
                 child: Center(
                   child: text_widget(
+                      horizontalPadding: 0.0,
+                      verticalPadding: 0.0,
                       text:
                           'Return of Property and close all financial obligation:',
                       weight: FontWeight.bold,
@@ -239,6 +256,8 @@ class F024 extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 200.0),
                 child: Center(
                   child: text_widget(
+                      horizontalPadding: 0.0,
+                      verticalPadding: 0.0,
                       text:
                           'In the event of my termination from employment, I will settle all open employee account (e.g., cash advances…) in full and return all tools and company property specified above or on attached sheet, upon my last day of work or as specified by my supervisor. If any property is not returned, I authorize a responsible value for such items to be deducted from my final paycheck (and if applicable any final reimbursement owed to me).',
                       size: 16.0),
@@ -248,6 +267,8 @@ class F024 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   text_widget(
+                    horizontalPadding: 0.0,
+                    verticalPadding: 0.0,
                     text: 'Employee Name:',
                     size: 18.0,
                   ),
@@ -257,6 +278,8 @@ class F024 extends StatelessWidget {
                     type: TextInputType.name,
                   ),
                   text_widget(
+                    horizontalPadding: 0.0,
+                    verticalPadding: 0.0,
                     text: 'Signature: ',
                     size: 18.0,
                   ),
@@ -270,19 +293,10 @@ class F024 extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(top: 20.0, right: 100.0, bottom: 20.0),
-                    child: text_widget(
-                      text: 'F024-THHC Acknowledgement receipt for equipment form',
-                      size: 14.0,
-                    ),
-                  ),
-                ],
-              ),
+              BottomPage(
+                  pageNumber: '',
+                  titleForm:
+                      'F024-THHC Acknowledgement receipt for equipment form'),
             ],
           ),
         );
@@ -308,59 +322,17 @@ class equipment_list_widget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          text_widget(text: 'o ', size: 16.0),
+          text_widget(
+              horizontalPadding: 0.0,
+              verticalPadding: 0.0,
+              text: 'o ',
+              size: 16.0),
           text_field_widget(
             textController: textController,
             width: screenWidth / 5,
             type: TextInputType.name,
           ),
         ],
-      ),
-    );
-  }
-}
-
-class text_field_widget extends StatelessWidget {
-  text_field_widget({
-    super.key,
-    required this.textController,
-    required this.width,
-    this.type,
-  });
-
-  final double width;
-  TextEditingController textController;
-  TextInputType? type;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      child: TextField(
-        keyboardType: type,
-        controller: textController,
-      ),
-    );
-  }
-}
-
-class text_widget extends StatelessWidget {
-  text_widget({
-    required this.text,
-    required this.size,
-    this.weight,
-    super.key,
-  });
-
-  String text;
-  double size;
-  FontWeight? weight;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Text(
-        text,
-        style: TextStyle(fontSize: size, fontWeight: weight),
       ),
     );
   }
