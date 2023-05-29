@@ -21,8 +21,8 @@ dependencies:
   
   cupertino_icons: ^1.0.2
   get: ^4.6.5
-  # responsive_framework: ^0.2.0
-  flutter_screenutil: ^5.8.2
+  responsive_framework: ^0.2.0
+
 
 
 
