@@ -74,4 +74,5 @@ class Controler_F023 extends GetxController {
   final Signature = TextEditingController();
   final Date = TextEditingController();
   final ID_Number = TextEditingController();
+
 }

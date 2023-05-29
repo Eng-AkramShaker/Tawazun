@@ -3,9 +3,7 @@
 // ignore_for_file: non_constant_identifier_names, prefer_const_constructors, sized_box_for_whitespace, file_names
 
 import 'package:flutter/material.dart';
-
 // Costume AppBar -------------------------------------------------------------
-
 Widget C_AppBar({required context, required text}) {
   final w = MediaQuery.of(context).size.width;
 
@@ -32,6 +30,7 @@ Widget C_AppBar({required context, required text}) {
           ),
         ),
       ],
+
     ),
   );
 }
