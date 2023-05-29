@@ -242,49 +242,7 @@ Widget TitleText(String title) {
   );
 }
 
-TableRow buildRowWidget({
-  required String dateTime,
-  required TextEditingController ptNameController,
-  required TextEditingController timeInController,
-  required TextEditingController tempInController,
-  required TextEditingController mrnController,
-  required TextEditingController timeOutController,
-  required TextEditingController tempOutController,
-  required TextEditingController badgeController,
-}) {
-  return TableRow(children: [
-    Text(
-      dateTime,
-      textAlign: TextAlign.center,
-      style:
-          const TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
-    ),
-    TextFormField(
-      keyboardType: TextInputType.name,
-      controller: ptNameController,
-    ),
-    TextFormField(
-      controller: timeInController,
-    ),
-    TextFormField(
-      controller: tempInController,
-    ),
-    TextFormField(
-      keyboardType: TextInputType.name,
-      controller: mrnController,
-    ),
-    TextFormField(
-      controller: tempOutController,
-    ),
-    TextFormField(
-      controller: tempOutController,
-    ),
-    TextFormField(
-      keyboardType: TextInputType.name,
-      controller: badgeController,
-    ),
-  ]);
-}
+
 
 class TableRowData {
   String column1;
