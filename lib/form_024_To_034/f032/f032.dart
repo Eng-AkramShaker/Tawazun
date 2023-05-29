@@ -11,6 +11,7 @@ class F032 extends StatelessWidget {
 
   List<TableRowData> tableData = List.generate(12, (_) => TableRowData());
   List<TableRowData_2> tableData_2 = List.generate(12, (_) => TableRowData_2());
+  
   List<List<TextEditingController>> textControllers = List.generate(
       12, (_) => List.generate(6, (_) => TextEditingController()));
   List<List<TextEditingController>> textControllers_2 = List.generate(
@@ -196,15 +197,17 @@ class F032 extends StatelessWidget {
                           columnWidths: const {
                             0: FlexColumnWidth(),
                           },
-                          children: [
+                          children:
+                           [for (int i = 0; i < 12; i++) 
                              buildRowWidget(
-                                  extControllerr: controller.selectedValue_1,
-                                  onChanged: (p0) => controller.onChangeValue_1(p0),
+                                  extControllerr: controller.selectedValue[0+i],
+                                  onChanged: (p0) => controller.onChangeValue(p0,i),
                                   value: 'yes',
                                   
                                 ),
-                        
+                          
                           ],
+                          
                         ),
                       ),
                       Expanded(
@@ -274,7 +277,7 @@ class F032 extends StatelessWidget {
                           tableData_2.map((row) => row.column1_2).toList();
 
                       controller.update();
-                      print(controller.selectedValue_1);
+                      print(controller.selectedValue);
                     },
                   ),
                 ),
@@ -330,6 +333,7 @@ class TableRowData_2 {
   });
 }
 
+
 class Radio_Widget extends StatelessWidget {
   final String value;
   final Object? extController;
@@ -363,9 +367,12 @@ TableRow buildRowWidget(
     Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          'Y',
-          style: TextStyle(fontWeight: FontWeight.bold),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 14.5),
+          child: Text(
+            'Y',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         Radio_Widget(
           value: 'yes',
@@ -377,9 +384,12 @@ TableRow buildRowWidget(
     Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          'N',
-          style: TextStyle(fontWeight: FontWeight.bold),
+        Padding(
+        padding: const EdgeInsets.symmetric(vertical: 14.5),
+          child: Text(
+            'N',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         Radio_Widget(
           value: 'no',

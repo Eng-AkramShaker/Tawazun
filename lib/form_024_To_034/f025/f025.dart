@@ -7,8 +7,7 @@ import '../widgets024=034.dart';
 import 'f025Controller.dart';
 
 class F025 extends StatelessWidget {
-   F025({super.key});
-   
+  F025({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class F025 extends StatelessWidget {
             children: [
               //========================================= Page One ==========================================
               TopPageWithLable(
-                lable: controller.lable,
+                  lable: controller.lable,
                   screenWidth: screenWidth,
                   title: "Acknowledgement receipt for equipment form"),
               // ============================ Table ====================================================================
@@ -35,11 +34,11 @@ class F025 extends StatelessWidget {
                       //================ Table One =============================
                       Table(
                           columnWidths: const {
-                            0: FlexColumnWidth(20),
-                            1: FlexColumnWidth(2),
-                            2: FlexColumnWidth(2),
-                            3: FlexColumnWidth(2),
-                            4: FlexColumnWidth(7),
+                            0: FlexColumnWidth(7),
+                            1: FlexColumnWidth(1),
+                            2: FlexColumnWidth(1),
+                            3: FlexColumnWidth(1),
+                            4: FlexColumnWidth(3),
                           },
                           border: TableBorder.all(),
                           children: [
@@ -61,99 +60,44 @@ class F025 extends StatelessWidget {
                                 "Comments",
                               ),
                             ]),
-                            buildRowWidget(value: '',
-                             text: 'Floor and stairway free of clutte',
-                             textControlle: controller.comment_1,
-                              extControllerr: controller.selectedValue_1,
-                               onChanged: (p0) => controller.onChangeValue_1(p0),),
-                               buildRowWidget(value: '',
-                             text: 'Rug and carpets firmly in place',
-                             textControlle: controller.comment_2,
-                              extControllerr: controller.selectedValue_2,
-                               onChanged: (p0) => controller.onChangeValue_2(p0),),
-                               buildRowWidget(value: '',
-                             text: 'Food and solid items laying around',
-                             textControlle: controller.comment_3,
-                              extControllerr: controller.selectedValue_3,
-                               onChanged: (p0) => controller.onChangeValue_3(p0),),
-                               buildRowWidget(value: '',
-                             text: 'Wires or Caples across floor where someone can trip',
-                             textControlle: controller.comment_4,
-                              extControllerr: controller.selectedValue_4,
-                               onChanged: (p0) => controller.onChangeValue_4(p0),),
-                               buildRowWidget(value: '',
-                             text: 'Light adequate for patient care and comfort',
-                             textControlle: controller.comment_5,
-                              extControllerr: controller.selectedValue_5,
-                               onChanged: (p0) => controller.onChangeValue_5(p0),),
-                               buildRowWidget(value: '',
-                             text: 'Easy access to patient',
-                             textControlle: controller.comment_6,
-                              extControllerr: controller.selectedValue_6,
-                               onChanged: (p0) => controller.onChangeValue_6(p0),),
-                               
-                               buildRowWidget(value: '',
-                             text: 'Hand rails on stairway',
-                             textControlle: controller.comment_7,
-                              extControllerr: controller.selectedValue_7,
-                               onChanged: (p0) => controller.onChangeValue_7(p0),),
-                               buildRowWidget(value: '',
-                             text: 'For ambulatory patient, clear path to bathroom',
-                             textControlle: controller.comment_8,
-                              extControllerr: controller.selectedValue_8,
-                               onChanged: (p0) => controller.onChangeValue_8(p0),),
-                               buildRowWidget(value: '',
-                             text: 'Grab rail for patient in shower/tub',
-                             textControlle: controller.comment_9,
-                              extControllerr: controller.selectedValue_9,
-                               onChanged: (p0) => controller.onChangeValue_9(p0),),
-                               buildRowWidget(value: '',
-                             text: 'Non slip surface in shower/tub',
-                             textControlle: controller.comment_10,
-                              extControllerr: controller.selectedValue_10,
-                               onChanged: (p0) => controller.onChangeValue_10(p0),),
-                               buildRowWidget(value: '',
-                             text: 'For bedbound patient on high bed with side rails',
-                             textControlle: controller.comment_11,
-                              extControllerr: controller.selectedValue_11,
-                               onChanged: (p0) => controller.onChangeValue_11(p0),),
-                               buildRowWidget(value: '',
-                             text: 'Restraints used? Explain reasons',
-                             textControlle: controller.comment_12,
-                              extControllerr: controller.selectedValue_12,
-                               onChanged: (p0) => controller.onChangeValue_12(p0),),
-                               buildRowWidget(value: '',
-                             text: 'Patient/Patient family using correct way to transfer and change position of patient.',
-                             textControlle: controller.comment_13,
-                              extControllerr: controller.selectedValue_13,
-                               onChanged: (p0) => controller.onChangeValue_13(p0),),
-                               buildRowWidget(value: '',
-                             text: 'For ambulatory patient wearing safe footwear',
-                             textControlle: controller.comment_14,
-                              extControllerr: controller.selectedValue_14,
-                               onChanged: (p0) => controller.onChangeValue_14(p0),),
-                                buildRowWidget(value: '',
-                             text: 'Patient who is dependent has alarm bell to call for assistance',
-                             textControlle: controller.comment_15,
-                              extControllerr: controller.selectedValue_15,
-                               onChanged: (p0) => controller.onChangeValue_15(p0),),
-                            
                           ]),
+                      Table(
+                        border: TableBorder.all(
+                            borderRadius: BorderRadius.all(Radius.zero)),
+                        columnWidths: const {
+                          0: FlexColumnWidth(7),
+                          1: FlexColumnWidth(1),
+                          2: FlexColumnWidth(1),
+                          3: FlexColumnWidth(1),
+                          4: FlexColumnWidth(3),
+                        },
+                        children: [
+                          for (int i = 0; i < 16; i++)
+                            buildRowWidget(
+                              extControllerr: controller.selValue[0 + i],
+                              onChanged: (p0) =>
+                                  controller.onChangeValue(p0, i),
+                              value: 'yes',
+                              text: controller.text[0 + i],
+                              textControlle: controller.comment[0 + i],
+                            ),
+                        ],
+                      ),
                       //====================== Table Two ===========================
                       Table(
                           columnWidths: const {
-                            0: FlexColumnWidth(20),
-                            1: FlexColumnWidth(2),
-                            2: FlexColumnWidth(2),
-                            3: FlexColumnWidth(2),
-                            4: FlexColumnWidth(7),
+                            0: FlexColumnWidth(7),
+                            1: FlexColumnWidth(1),
+                            2: FlexColumnWidth(1),
+                            3: FlexColumnWidth(1),
+                            4: FlexColumnWidth(3),
                           },
                           border: TableBorder.all(),
                           children: [
                             //This table row is for the table header which is static
                             TableRow(children: [
                               TitleText(
-                                "Environmental and Mobility Safety, Bathroom Safety",
+                                "Medical equipment\'s and supplies, Electrical Safety",
                               ),
                               TitleText(
                                 "YES",
@@ -168,42 +112,29 @@ class F025 extends StatelessWidget {
                                 "Comments",
                               ),
                             ]),
-                            buildRowWidget(value: '',
-                             text: 'Safe plug for medical equipment',
-                             textControlle: controller.comment_16,
-                              extControllerr: controller.selectedValue_16,
-                               onChanged: (p0) => controller.onChangeValue_16(p0),),
-                               buildRowWidget(value: '',
-                             text: 'Family trained in use and safety of equipment\'s',
-                             textControlle: controller.comment_17,
-                              extControllerr: controller.selectedValue_17,
-                               onChanged: (p0) => controller.onChangeValue_17(p0),),
-                               buildRowWidget(value: '',
-                             text: 'Maintenance checks done on equipment\'s',
-                             textControlle: controller.comment_18,
-                              extControllerr: controller.selectedValue_18,
-                               onChanged: (p0) => controller.onChangeValue_18(p0),),
-                               buildRowWidget(value: '',
-                             text: 'If there is O2 in place, is there a no smoking sign visible?',
-                             textControlle: controller.comment_19,
-                              extControllerr: controller.selectedValue_19,
-                               onChanged: (p0) => controller.onChangeValue_19(p0),),
-                               buildRowWidget(value: '',
-                             text: 'All equipment\'s (bed, wheelchair, etc.) in safe working condition',
-                             textControlle: controller.comment_20,
-                              extControllerr: controller.selectedValue_20,
-                               onChanged: (p0) => controller.onChangeValue_20(p0),),
-                               buildRowWidget(value: '',
-                             text: 'Medication in date and stored safety away from children',
-                             textControlle: controller.comment_21,
-                              extControllerr: controller.selectedValue_21,
-                               onChanged: (p0) => controller.onChangeValue_21(p0),),
-                               buildRowWidget(value: '',
-                             text: 'Medication storage with accepted temperature',
-                             textControlle: controller.comment_22,
-                              extControllerr: controller.selectedValue_22,
-                               onChanged: (p0) => controller.onChangeValue_22(p0),),
                           ]),
+                      Table(
+                        border: TableBorder.all(
+                            borderRadius: BorderRadius.all(Radius.zero)),
+                        columnWidths: const {
+                          0: FlexColumnWidth(7),
+                          1: FlexColumnWidth(1),
+                          2: FlexColumnWidth(1),
+                          3: FlexColumnWidth(1),
+                          4: FlexColumnWidth(3),
+                        },
+                        children: [
+                          for (int i = 16; i < 22; i++)
+                            buildRowWidget(
+                              extControllerr: controller.selValue[0 + i],
+                              onChanged: (p0) =>
+                                  controller.onChangeValue(p0, i),
+                              value: 'yes',
+                              text: controller.text[0 + i],
+                              textControlle: controller.comment[0 + i],
+                            ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
@@ -245,10 +176,8 @@ class F025 extends StatelessWidget {
                     onPressed: () {
                       // Save data to GetX controllers
 
-                     
-
                       controller.update();
-                      print(controller.selectedValue_1);
+                      print(controller.selValue);
                     },
                   ),
                 ),
@@ -262,7 +191,7 @@ class F025 extends StatelessWidget {
               ),
               //========================================= Page Two ==========================================
               TopPageWithLable(
-                lable: controller.lable,
+                  lable: controller.lable,
                   screenWidth: screenWidth,
                   title: "Acknowledgement receipt for equipment form"),
               Padding(
@@ -466,9 +395,7 @@ TableRow buildRowWidget(
     required Object? extControllerr,
     required Function(Object?)? onChanged}) {
   return TableRow(children: [
-    text_widget(
-        text:text,
-        size: 16.0),
+    text_widget(text: text, size: 16.0),
     Radio_Widget(
       value: 'yes',
       extController: extControllerr,
@@ -485,7 +412,6 @@ TableRow buildRowWidget(
       onChanged: onChanged,
     ),
     text_field_widget(
-        textController: textControlle,
-         height: 40.0, width: 200.0),
+        textController: textControlle, height: 40.0, width: 200.0),
   ]);
 }

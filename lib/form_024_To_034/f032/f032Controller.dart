@@ -24,10 +24,28 @@ class F032Controller extends GetxController {
   var month = TextEditingController();
   var lable = TextEditingController();
 
-  var selectedValue_1 = '';
+  
 
-  onChangeValue_1(dynamic value) {
-    selectedValue_1 = value;
+
+  List<String> selectedValue = [
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    
+
+  ];
+
+  onChangeValue(dynamic value, int list) {
+    selectedValue[list] = value;
     update();
   }
 }
