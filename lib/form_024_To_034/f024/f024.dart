@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 import '../widgets024=034.dart';
 import 'f024Controller.dart';
+import 'f024Model.dart';
 
 class F024 extends StatelessWidget {
   const F024({super.key});
@@ -292,6 +293,29 @@ class F024 extends StatelessWidget {
                     height: 100.0,
                   ),
                 ],
+              ),
+              Center(
+                child: Container(
+                  width: screenWidth/4,
+                  height: 50.0,
+                  margin: EdgeInsets.symmetric(vertical: 20.0),
+                  child: MaterialButton(
+                   
+                    color: Colors.teal.shade400,
+                child: Text('Save',style: TextStyle(fontSize: 18.0,color: Colors.white,fontWeight: FontWeight.bold),),
+                onPressed: () {
+                // Save data to GetX controllers
+                
+                 controller.sendtoapi(F024Model(
+                          text: controller.employeeName.text,
+                          value: controller.officeValue
+                          ));
+                
+                controller.update();
+                print(controller.employeeName);
+                },
+                ),
+                ),
               ),
               BottomPage(
                   pageNumber: '',

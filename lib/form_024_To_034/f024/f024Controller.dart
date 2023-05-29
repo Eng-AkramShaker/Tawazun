@@ -5,6 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
+import 'f024Model.dart';
+
 
 class F024Controller extends GetxController {
   bool officeValue = false;
@@ -34,6 +36,13 @@ DateTime now = DateTime.now();
     var equipmentList_5 = TextEditingController();
     var equipmentList_6 = TextEditingController();
     var other = TextEditingController();
+
+
+
+
+  //     var text1 = TextEditingController();
+  // bool value = false;
+  sendtoapi(F024Model model) {}
 
   
 }
