@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable, avoid_unnecessary_containers, camel_case_types, prefer_const_constructors, sized_box_for_whitespace
 
+import 'package:f011/form_024_To_034/f029/f029.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../widgets024=034.dart';
@@ -211,7 +212,11 @@ class F030 extends StatelessWidget {
                 ),
                 ),
               ),
-
+              text_widget_h2(text: '*Acceptable Temperature Range: 2°C to 8°C according to THHC-022 SPECIMEN COLLECTION, HANDLING,\n TRANSPORTATION AND TRACKING'),
+                text_widget_h2(text: '*Accepted time less than 2 hour to deliver to lab.'),
+                text_widget_h2(text: 'Transport a Urine Specimen as soon as possible.\n Unpreserved urine can be processed within 2 hours at room temperature or 24 hours if refrigerated. '),
+                text_widget_h2(text: 'Transport a Stool specimen as soon as possible. Unpreserved urine can be processed within 2 hours at room '),
+                text_widget_h2(text: 'temperature or 48 hours if refrigerated.'),
               BottomPage(
                   pageNumber: '',
                   titleForm:
