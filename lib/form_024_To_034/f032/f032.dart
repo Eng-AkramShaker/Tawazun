@@ -37,6 +37,7 @@ class F032 extends StatelessWidget {
           body: ListView(
             children: [
               TopPageWithLable(
+                lable: controller.lable,
                   screenWidth: screenWidth,
                   title: 'MEDICATION RECONCILLATION FORM '),
 

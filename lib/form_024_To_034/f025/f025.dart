@@ -7,7 +7,8 @@ import '../widgets024=034.dart';
 import 'f025Controller.dart';
 
 class F025 extends StatelessWidget {
-  const F025({super.key});
+   F025({super.key});
+   
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +22,7 @@ class F025 extends StatelessWidget {
             children: [
               //========================================= Page One ==========================================
               TopPageWithLable(
+                lable: controller.lable,
                   screenWidth: screenWidth,
                   title: "Acknowledgement receipt for equipment form"),
               // ============================ Table ====================================================================
@@ -59,421 +61,83 @@ class F025 extends StatelessWidget {
                                 "Comments",
                               ),
                             ]),
-                            // TableRow(children: [
-                            //   text_widget(
-                            //       text: 'Floor and stairway free of clutter',
-                            //       size: 16.0),
-                            //   Radio_Widget(
-                            //     value: 'yes',
-                            //     extController: controller.selectedValue_1,
-                            //     onChanged: (p0) =>
-                            //         controller.onChangeValue_1(p0),
-                            //   ),
-                            //   Radio_Widget(
-                            //     value: 'no',
-                            //     extController: controller.selectedValue_1,
-                            //     onChanged: (p0) =>
-                            //         controller.onChangeValue_1(p0),
-                            //   ),
-                            //   Radio_Widget(
-                            //     value: 'na',
-                            //     extController: controller.selectedValue_1,
-                            //     onChanged: (p0) =>
-                            //         controller.onChangeValue_1(p0),
-                            //   ),
-                            //   text_field_widget(
-                            //       textController: controller.comment_1,
-                            //       height: 40.0,
-                            //       width: 200.0),
-                            // ]),
                             buildRowWidget(value: '',
                              text: 'Floor and stairway free of clutte',
                              textControlle: controller.comment_1,
                               extControllerr: controller.selectedValue_1,
                                onChanged: (p0) => controller.onChangeValue_1(p0),),
-                            TableRow(children: [
-                              text_widget(
-                                  text: 'Rug and carpets firmly in place',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_2,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_2(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_2,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_2(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_2,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_2(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_2,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text: 'Food and solid items laying around',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_3,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_3(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_3,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_3(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_3,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_3(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_3,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text:
-                                      'Wires or Caples across floor where someone can trip',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_4,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_4(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_4,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_4(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_4,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_4(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_4,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text:
-                                      'Light adequate for patient care and comfort',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_5,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_5(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_5,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_5(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_5,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_5(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_5,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text: 'Easy access to patient', size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_6,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_6(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_6,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_6(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_6,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_6(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_6,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text: 'Hand rails on stairway', size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_7,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_7(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_7,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_7(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_7,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_7(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_7,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text:
-                                      'For ambulatory patient, clear path to bathroom',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_8,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_8(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_8,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_8(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_8,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_8(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_8,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text: 'Grab rail for patient in shower/tub',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_9,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_9(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_9,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_9(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_9,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_9(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_9,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text: 'Non slip surface in shower/tub',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_10,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_10(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_10,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_10(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_10,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_10(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_10,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text:
-                                      'For bedbound patient on high bed with side rails',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_11,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_11(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_11,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_11(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_11,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_11(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_11,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text: 'Restraints used? Explain reasons',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_12,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_12(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_12,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_12(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_12,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_12(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_12,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text:
-                                      'Patient/Patient family using correct way to transfer and change position of patient.',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_13,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_13(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_13,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_13(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_13,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_13(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_13,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text:
-                                      'For ambulatory patient wearing safe footwear',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_14,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_14(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_14,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_14(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_14,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_14(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_14,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text:
-                                      'Patient who is dependent has alarm bell to call for assistance',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_15,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_15(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_15,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_15(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_15,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_15(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_15,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
+                               buildRowWidget(value: '',
+                             text: 'Rug and carpets firmly in place',
+                             textControlle: controller.comment_2,
+                              extControllerr: controller.selectedValue_2,
+                               onChanged: (p0) => controller.onChangeValue_2(p0),),
+                               buildRowWidget(value: '',
+                             text: 'Food and solid items laying around',
+                             textControlle: controller.comment_3,
+                              extControllerr: controller.selectedValue_3,
+                               onChanged: (p0) => controller.onChangeValue_3(p0),),
+                               buildRowWidget(value: '',
+                             text: 'Wires or Caples across floor where someone can trip',
+                             textControlle: controller.comment_4,
+                              extControllerr: controller.selectedValue_4,
+                               onChanged: (p0) => controller.onChangeValue_4(p0),),
+                               buildRowWidget(value: '',
+                             text: 'Light adequate for patient care and comfort',
+                             textControlle: controller.comment_5,
+                              extControllerr: controller.selectedValue_5,
+                               onChanged: (p0) => controller.onChangeValue_5(p0),),
+                               buildRowWidget(value: '',
+                             text: 'Easy access to patient',
+                             textControlle: controller.comment_6,
+                              extControllerr: controller.selectedValue_6,
+                               onChanged: (p0) => controller.onChangeValue_6(p0),),
+                               
+                               buildRowWidget(value: '',
+                             text: 'Hand rails on stairway',
+                             textControlle: controller.comment_7,
+                              extControllerr: controller.selectedValue_7,
+                               onChanged: (p0) => controller.onChangeValue_7(p0),),
+                               buildRowWidget(value: '',
+                             text: 'For ambulatory patient, clear path to bathroom',
+                             textControlle: controller.comment_8,
+                              extControllerr: controller.selectedValue_8,
+                               onChanged: (p0) => controller.onChangeValue_8(p0),),
+                               buildRowWidget(value: '',
+                             text: 'Grab rail for patient in shower/tub',
+                             textControlle: controller.comment_9,
+                              extControllerr: controller.selectedValue_9,
+                               onChanged: (p0) => controller.onChangeValue_9(p0),),
+                               buildRowWidget(value: '',
+                             text: 'Non slip surface in shower/tub',
+                             textControlle: controller.comment_10,
+                              extControllerr: controller.selectedValue_10,
+                               onChanged: (p0) => controller.onChangeValue_10(p0),),
+                               buildRowWidget(value: '',
+                             text: 'For bedbound patient on high bed with side rails',
+                             textControlle: controller.comment_11,
+                              extControllerr: controller.selectedValue_11,
+                               onChanged: (p0) => controller.onChangeValue_11(p0),),
+                               buildRowWidget(value: '',
+                             text: 'Restraints used? Explain reasons',
+                             textControlle: controller.comment_12,
+                              extControllerr: controller.selectedValue_12,
+                               onChanged: (p0) => controller.onChangeValue_12(p0),),
+                               buildRowWidget(value: '',
+                             text: 'Patient/Patient family using correct way to transfer and change position of patient.',
+                             textControlle: controller.comment_13,
+                              extControllerr: controller.selectedValue_13,
+                               onChanged: (p0) => controller.onChangeValue_13(p0),),
+                               buildRowWidget(value: '',
+                             text: 'For ambulatory patient wearing safe footwear',
+                             textControlle: controller.comment_14,
+                              extControllerr: controller.selectedValue_14,
+                               onChanged: (p0) => controller.onChangeValue_14(p0),),
+                                buildRowWidget(value: '',
+                             text: 'Patient who is dependent has alarm bell to call for assistance',
+                             textControlle: controller.comment_15,
+                              extControllerr: controller.selectedValue_15,
+                               onChanged: (p0) => controller.onChangeValue_15(p0),),
+                            
                           ]),
                       //====================== Table Two ===========================
                       Table(
@@ -504,201 +168,41 @@ class F025 extends StatelessWidget {
                                 "Comments",
                               ),
                             ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text: 'Safe plug for medical equipment',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_16,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_16(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_16,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_16(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_16,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_16(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_16,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text:
-                                      'Family trained in use and safety of equipment is',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_17,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_17(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_17,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_17(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_17,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_17(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_17,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text:
-                                      'Maintenance checks done on equipment’s',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_18,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_18(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_18,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_18(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_18,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_18(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_18,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text:
-                                      'If there is O2 in place, is there a no smoking sign visible?',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_19,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_19(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_19,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_19(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_19,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_19(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_19,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text:
-                                      'All equipment is (bed, wheelchair, etc.) in safe working condition',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_20,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_20(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_20,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_20(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_20,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_20(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_20,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text:
-                                      'Medication in date and stored safety away from children',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_21,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_21(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_21,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_21(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_21,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_21(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_21,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text:
-                                      'Medication storage with accepted temperature',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_22,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_22(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_22,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_22(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_22,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_22(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_22,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
+                            buildRowWidget(value: '',
+                             text: 'Safe plug for medical equipment',
+                             textControlle: controller.comment_16,
+                              extControllerr: controller.selectedValue_16,
+                               onChanged: (p0) => controller.onChangeValue_16(p0),),
+                               buildRowWidget(value: '',
+                             text: 'Family trained in use and safety of equipment\'s',
+                             textControlle: controller.comment_17,
+                              extControllerr: controller.selectedValue_17,
+                               onChanged: (p0) => controller.onChangeValue_17(p0),),
+                               buildRowWidget(value: '',
+                             text: 'Maintenance checks done on equipment\'s',
+                             textControlle: controller.comment_18,
+                              extControllerr: controller.selectedValue_18,
+                               onChanged: (p0) => controller.onChangeValue_18(p0),),
+                               buildRowWidget(value: '',
+                             text: 'If there is O2 in place, is there a no smoking sign visible?',
+                             textControlle: controller.comment_19,
+                              extControllerr: controller.selectedValue_19,
+                               onChanged: (p0) => controller.onChangeValue_19(p0),),
+                               buildRowWidget(value: '',
+                             text: 'All equipment\'s (bed, wheelchair, etc.) in safe working condition',
+                             textControlle: controller.comment_20,
+                              extControllerr: controller.selectedValue_20,
+                               onChanged: (p0) => controller.onChangeValue_20(p0),),
+                               buildRowWidget(value: '',
+                             text: 'Medication in date and stored safety away from children',
+                             textControlle: controller.comment_21,
+                              extControllerr: controller.selectedValue_21,
+                               onChanged: (p0) => controller.onChangeValue_21(p0),),
+                               buildRowWidget(value: '',
+                             text: 'Medication storage with accepted temperature',
+                             textControlle: controller.comment_22,
+                              extControllerr: controller.selectedValue_22,
+                               onChanged: (p0) => controller.onChangeValue_22(p0),),
                           ]),
                     ],
                   ),
@@ -758,6 +262,7 @@ class F025 extends StatelessWidget {
               ),
               //========================================= Page Two ==========================================
               TopPageWithLable(
+                lable: controller.lable,
                   screenWidth: screenWidth,
                   title: "Acknowledgement receipt for equipment form"),
               Padding(

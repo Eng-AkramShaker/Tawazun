@@ -22,6 +22,7 @@ class F032Controller extends GetxController {
   var Equipment = TextEditingController();
   var serialNo = TextEditingController();
   var month = TextEditingController();
+  var lable = TextEditingController();
 
   var selectedValue_1 = '';
 

@@ -31,7 +31,7 @@ class F025Controller extends GetxController {
 
 
 
-
+   
  
 
   
@@ -45,6 +45,7 @@ class F025Controller extends GetxController {
     var date = DateTime.now();
 
     var measureTaken = TextEditingController();
+    var lable = TextEditingController();
     var followUp = TextEditingController();
     var staffName = TextEditingController();
     var signature = TextEditingController();
