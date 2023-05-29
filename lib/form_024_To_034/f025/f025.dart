@@ -1,6 +1,5 @@
 // ignore_for_file: must_be_immutable, avoid_unnecessary_containers, camel_case_types, prefer_const_constructors, sized_box_for_whitespace, non_constant_identifier_names
 
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,7 +20,9 @@ class F025 extends StatelessWidget {
           body: ListView(
             children: [
               //========================================= Page One ==========================================
-              TopPageWithLable(screenWidth: screenWidth,title: "Acknowledgement receipt for equipment form"),
+              TopPageWithLable(
+                  screenWidth: screenWidth,
+                  title: "Acknowledgement receipt for equipment form"),
               // ============================ Table ====================================================================
               Padding(
                 padding: const EdgeInsets.symmetric(
@@ -58,33 +59,38 @@ class F025 extends StatelessWidget {
                                 "Comments",
                               ),
                             ]),
-                            TableRow(children: [
-                              text_widget(
-                                  text: 'Floor and stairway free of clutter',
-                                  size: 16.0),
-                              Radio_Widget(
-                                value: 'yes',
-                                extController: controller.selectedValue_1,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_1(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'no',
-                                extController: controller.selectedValue_1,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_1(p0),
-                              ),
-                              Radio_Widget(
-                                value: 'na',
-                                extController: controller.selectedValue_1,
-                                onChanged: (p0) =>
-                                    controller.onChangeValue_1(p0),
-                              ),
-                              text_field_widget(
-                                  textController: controller.comment_1,
-                                  height: 40.0,
-                                  width: 200.0),
-                            ]),
+                            // TableRow(children: [
+                            //   text_widget(
+                            //       text: 'Floor and stairway free of clutter',
+                            //       size: 16.0),
+                            //   Radio_Widget(
+                            //     value: 'yes',
+                            //     extController: controller.selectedValue_1,
+                            //     onChanged: (p0) =>
+                            //         controller.onChangeValue_1(p0),
+                            //   ),
+                            //   Radio_Widget(
+                            //     value: 'no',
+                            //     extController: controller.selectedValue_1,
+                            //     onChanged: (p0) =>
+                            //         controller.onChangeValue_1(p0),
+                            //   ),
+                            //   Radio_Widget(
+                            //     value: 'na',
+                            //     extController: controller.selectedValue_1,
+                            //     onChanged: (p0) =>
+                            //         controller.onChangeValue_1(p0),
+                            //   ),
+                            //   text_field_widget(
+                            //       textController: controller.comment_1,
+                            //       height: 40.0,
+                            //       width: 200.0),
+                            // ]),
+                            buildRowWidget(value: '',
+                             text: 'Floor and stairway free of clutte',
+                             textControlle: controller.comment_1,
+                              extControllerr: controller.selectedValue_1,
+                               onChanged: (p0) => controller.onChangeValue_1(p0),),
                             TableRow(children: [
                               text_widget(
                                   text: 'Rug and carpets firmly in place',
@@ -718,13 +724,42 @@ class F025 extends StatelessWidget {
                       '________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________',
                 ),
               ),
-              BottomPage(pageNumber: '1',titleForm: 'F025-THHC Home Safety Assessment Form'),
+              Center(
+                child: Container(
+                  width: screenWidth / 8,
+                  height: 50.0,
+                  margin: EdgeInsets.symmetric(vertical: 20.0),
+                  child: MaterialButton(
+                    color: Colors.teal.shade400,
+                    child: Text(
+                      'Save',
+                      style: TextStyle(
+                          fontSize: 18.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    onPressed: () {
+                      // Save data to GetX controllers
+
+                     
+
+                      controller.update();
+                      print(controller.selectedValue_1);
+                    },
+                  ),
+                ),
+              ),
+              BottomPage(
+                  pageNumber: '1',
+                  titleForm: 'F025-THHC Home Safety Assessment Form'),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20.0),
                 child: Divider(),
               ),
               //========================================= Page Two ==========================================
-              TopPageWithLable(screenWidth: screenWidth, title: "Acknowledgement receipt for equipment form"),
+              TopPageWithLable(
+                  screenWidth: screenWidth,
+                  title: "Acknowledgement receipt for equipment form"),
               Padding(
                 padding: const EdgeInsets.only(left: 250.0, top: 10.0),
                 child: text_widget(
@@ -806,7 +841,9 @@ class F025 extends StatelessWidget {
                   ],
                 ),
               ),
-              BottomPage(pageNumber: '2', titleForm: 'F025-THHC Home Safety Assessment Form'),
+              BottomPage(
+                  pageNumber: '2',
+                  titleForm: 'F025-THHC Home Safety Assessment Form'),
             ],
           ),
         );
@@ -814,8 +851,6 @@ class F025 extends StatelessWidget {
     );
   }
 }
-
-
 
 class Radio_Widget extends StatelessWidget {
   final String value;
@@ -899,7 +934,8 @@ class text_widget extends StatelessWidget {
       padding: EdgeInsets.only(left: 10.0),
       child: Text(
         text,
-        style: TextStyle(fontSize: 1.9*screenWidth*0.01, fontWeight: weight),
+        style:
+            TextStyle(fontSize: 1.9 * screenWidth * 0.01, fontWeight: weight),
       ),
     );
   }
@@ -916,4 +952,35 @@ Widget TitleText(String title) {
       style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
     ),
   );
+}
+
+TableRow buildRowWidget(
+    {required String value,
+    required String text,
+    required TextEditingController textControlle,
+    required Object? extControllerr,
+    required Function(Object?)? onChanged}) {
+  return TableRow(children: [
+    text_widget(
+        text:text,
+        size: 16.0),
+    Radio_Widget(
+      value: 'yes',
+      extController: extControllerr,
+      onChanged: onChanged,
+    ),
+    Radio_Widget(
+      value: 'no',
+      extController: extControllerr,
+      onChanged: onChanged,
+    ),
+    Radio_Widget(
+      value: 'na',
+      extController: extControllerr,
+      onChanged: onChanged,
+    ),
+    text_field_widget(
+        textController: textControlle,
+         height: 40.0, width: 200.0),
+  ]);
 }
