@@ -22,12 +22,12 @@ class BottomPage extends StatelessWidget {
             verticalPadding: 10.0,
             horizontalPadding: 20.0,
             text: titleForm,
-            size: 1.9*screenWidth*0.01,
+            size: 10.0,
           ),
         ),
         Padding(
            padding: const EdgeInsets.only(top: 20.0, right: 100.0, bottom: 20.0),
-          child: Text(pageNumber,style: TextStyle(fontSize: 1.9*screenWidth*0.01,),),
+          child: Text(pageNumber,style: TextStyle(fontSize: 12.0),),
         )
       ],
     );

@@ -5,7 +5,9 @@ import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
 
 import 'F_011/home.dart';
+import 'form024-form034/f024/f024.dart';
 import 'form024-form034/f027/f027.dart';
+import 'form024-form034/f030/f030.dart';
 
 
 void main() {
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
       //
 
 
-      home: F027(),
+      home: F030(),
 
     );
   }

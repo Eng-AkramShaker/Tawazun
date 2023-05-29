@@ -3,6 +3,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
+
 
 class F024Controller extends GetxController {
   bool officeValue = false;
@@ -18,8 +20,8 @@ class F024Controller extends GetxController {
 
 
 
-    var date = DateTime.now();
-
+DateTime now = DateTime.now();
+  String dateMonth = DateFormat.j().format(DateTime.now());
     var employeeName = TextEditingController();
     var employeeSignature = TextEditingController();
     var cardNumber = TextEditingController();

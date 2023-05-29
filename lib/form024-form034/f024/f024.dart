@@ -45,7 +45,7 @@ class F024 extends StatelessWidget {
                   text_widget(
                     horizontalPadding: 0.0,
                     verticalPadding: 0.0,
-                    text: '${controller.date}',
+                    text: '${controller.now}',
                     size: 18.0,
                   ),
                 ],

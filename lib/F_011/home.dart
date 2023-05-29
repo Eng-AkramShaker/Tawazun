@@ -3,7 +3,8 @@
 import 'package:f011/F_011/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'controller.dart';
+
+import '../F020/Controller/controller.dart';
 
 class Home_F020 extends StatelessWidget {
   @override
