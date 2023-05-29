@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, must_be_immutable, camel_case_types
 
 import 'package:flutter/material.dart';
 
@@ -6,28 +6,35 @@ class BottomPage extends StatelessWidget {
   final dynamic pageNumber;
   final dynamic titleForm;
   const BottomPage({
-    super.key,required this.pageNumber,required this.titleForm,
+    super.key,
+    required this.pageNumber,
+    required this.titleForm,
   });
 
   @override
   Widget build(BuildContext context) {
-                    final screenWidth = MediaQuery.of(context).size.width;
+    final screenWidth = MediaQuery.of(context).size.width;
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 20.0,  bottom: 20.0),
+          padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
           child: text_widget(
             verticalPadding: 10.0,
             horizontalPadding: 20.0,
             text: titleForm,
-            size: 1.9*screenWidth*0.01,
+            size: 1.9 * screenWidth * 0.01,
           ),
         ),
         Padding(
-           padding: const EdgeInsets.only(top: 20.0, right: 100.0, bottom: 20.0),
-          child: Text(pageNumber,style: TextStyle(fontSize: 1.9*screenWidth*0.01,),),
+          padding: const EdgeInsets.only(top: 20.0, right: 100.0, bottom: 20.0),
+          child: Text(
+            pageNumber,
+            style: TextStyle(
+              fontSize: 1.9 * screenWidth * 0.01,
+            ),
+          ),
         )
       ],
     );
@@ -35,10 +42,10 @@ class BottomPage extends StatelessWidget {
 }
 
 class TopPage extends StatelessWidget {
-
   const TopPage({
     super.key,
-    required this.screenWidth,required this.title,
+    required this.screenWidth,
+    required this.title,
   });
 
   final double screenWidth;
@@ -46,22 +53,22 @@ class TopPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-                    final screenWidth = MediaQuery.of(context).size.width;
+    final screenWidth = MediaQuery.of(context).size.width;
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Container(
+        SizedBox(
           height: 75.0,
           width: screenWidth / 4,
           child: Image.asset('assets/images/log.png'),
         ),
-         Padding(
+        Padding(
           padding: EdgeInsets.only(top: 20.0),
           child: Text(
             title,
             style: TextStyle(
-                fontSize: 1.9*screenWidth*0.01,
+                fontSize: 1.9 * screenWidth * 0.01,
                 fontWeight: FontWeight.bold,
                 color: Color.fromRGBO(33, 33, 33, 1)),
           ),
@@ -86,7 +93,7 @@ class text_field_widget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width,
       child: TextField(
         keyboardType: type,
@@ -100,8 +107,8 @@ class text_widget extends StatelessWidget {
   text_widget({
     required this.text,
     required this.size,
-    required double this.verticalPadding,
-    required double this.horizontalPadding,
+    required this.verticalPadding,
+    required this.horizontalPadding,
     this.weight,
     super.key,
   });
@@ -113,20 +120,19 @@ class text_widget extends StatelessWidget {
   FontWeight? weight;
   @override
   Widget build(BuildContext context) {
-        final screenWidth = MediaQuery.of(context).size.width;
+    final screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
       padding: EdgeInsets.symmetric(
           horizontal: horizontalPadding, vertical: verticalPadding),
       child: Text(
         text,
-        style: TextStyle(fontSize: 1.9*screenWidth*0.01, fontWeight: weight),
+        style:
+            TextStyle(fontSize: 1.9 * screenWidth * 0.01, fontWeight: weight),
       ),
     );
   }
 }
-
-
 
 class TopPageWithLable extends StatelessWidget {
   const TopPageWithLable({
@@ -143,12 +149,12 @@ class TopPageWithLable extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Container(
+        SizedBox(
           height: 75.0,
           width: screenWidth / 4,
           child: Image.asset('assets/images/log.png'),
         ),
-         Padding(
+        Padding(
           padding: EdgeInsets.only(top: 20.0),
           child: Text(
             title,
