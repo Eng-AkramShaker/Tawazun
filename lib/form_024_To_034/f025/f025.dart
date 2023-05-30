@@ -146,18 +146,34 @@ class F025 extends StatelessWidget {
                     weight: FontWeight.bold,
                     size: 16.0),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 250.0, vertical: 10.0),
-                child: text_field_widget(
-                  textController: controller.problemsInentifide,
-                  width: screenWidth / 2,
-                  type: TextInputType.name,
-                  maxLine: 5,
-                  inputBorder: InputBorder.none,
-                  hintText:
-                      '________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________',
-                ),
+              Stack(
+                children: [
+                  for (int i = 0; i < 5; i++)
+                            Container(
+                              width: double.infinity,
+                              margin: EdgeInsets.only(
+                                top: 4 + (i + 1) * 28,
+                                left: 250,
+                                right: 250,
+                              ),
+                              height: 1,
+                              color: Colors.grey[700],
+                            ),
+                  SizedBox(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 250.0, vertical: 10.0),
+                      child: text_field_widget(
+                        textController: controller.problemsInentifide,
+                        width: screenWidth / 2,
+                        type: TextInputType.name,
+                        maxLine: 5,
+                        inputBorder: InputBorder.none,
+                        
+                      ),
+                    ),
+                  ),
+                ],
               ),
               Center(
                 child: Container(
@@ -201,18 +217,34 @@ class F025 extends StatelessWidget {
                     weight: FontWeight.bold,
                     size: 16.0),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 250.0, vertical: 10.0),
-                child: text_field_widget(
-                  textController: controller.measureTaken,
-                  width: screenWidth / 2,
-                  type: TextInputType.name,
-                  maxLine: 5,
-                  inputBorder: InputBorder.none,
-                  hintText:
-                      '________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________',
-                ),
+              Stack(
+                children: [
+                  for (int i = 0; i < 5; i++)
+                            Container(
+                              width: double.infinity,
+                              margin: EdgeInsets.only(
+                                top: 4 + (i + 1) * 28,
+                                left: 250,
+                                right: 250,
+                              ),
+                              height: 1,
+                              color: Colors.grey[700],
+                            ),
+                  SizedBox(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 250.0, vertical: 10.0),
+                      child: text_field_widget(
+                        textController: controller.measureTaken,
+                        width: screenWidth / 2,
+                        type: TextInputType.name,
+                        maxLine: 5,
+                        inputBorder: InputBorder.none,
+                        
+                      ),
+                    ),
+                  ),
+                ],
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 250.0, top: 10.0),
@@ -221,18 +253,34 @@ class F025 extends StatelessWidget {
                     weight: FontWeight.bold,
                     size: 16.0),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 250.0, vertical: 10.0),
-                child: text_field_widget(
-                  textController: controller.followUp,
-                  width: screenWidth / 2,
-                  type: TextInputType.name,
-                  maxLine: 5,
-                  inputBorder: InputBorder.none,
-                  hintText:
-                      '________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________',
+              Stack(
+                children: [
+                    for (int i = 0; i < 5; i++)
+                            Container(
+                              width: double.infinity,
+                              margin: EdgeInsets.only(
+                                top: 4 + (i + 1) * 28,
+                                left: 250,
+                                right: 250,
+                              ),
+                              height: 1,
+                              color: Colors.grey[700],
+                            ),
+                  SizedBox(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 250.0, vertical: 10.0),
+                    child: text_field_widget(
+                      textController: controller.followUp,
+                      width: screenWidth / 2,
+                      type: TextInputType.name,
+                      maxLine: 5,
+                      inputBorder: InputBorder.none,
+                          
+                    ),
+                  ),
                 ),
+                ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

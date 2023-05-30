@@ -251,10 +251,9 @@ class TableHeadTitle_1 extends StatelessWidget {
               border: TableBorder.all(),
               children: [
                 //This table row is for the table header
-                TableRow(children: [
-                  TitleText(controller.columnTitles_1[0]),
-                  TitleText(controller.columnTitles_1[1]),
-                  TitleText(controller.columnTitles_1[2]),
+                TableRow(children: [for(int i = 0 ; i < 3 ; i++)
+                  TitleText(controller.columnTitles_1[i]),
+                 
                 ]),
               ]),
         ),
@@ -291,15 +290,9 @@ class TableHeadTitle_2 extends StatelessWidget {
               border: TableBorder.all(),
               children: [
                 //This table row is for the table header
-                TableRow(children: [
-                  TitleText(controller.columnTitles_2[0]),
-                  TitleText(controller.columnTitles_2[1]),
-                  TitleText(controller.columnTitles_2[2]),
-                  TitleText(controller.columnTitles_2[3]),
-                  TitleText(controller.columnTitles_2[4]),
-                  TitleText(controller.columnTitles_2[5]),
-                  TitleText(controller.columnTitles_2[6]),
-                  TitleText(controller.columnTitles_2[7]),
+                TableRow(children: [for(int i = 0 ; i < 8 ; i++)
+                  TitleText(controller.columnTitles_2[i]),
+                 
                 ]),
               ]),
         ),
