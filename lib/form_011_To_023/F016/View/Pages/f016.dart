@@ -50,7 +50,6 @@ class _form_F016State extends State<form_F016> {
                       Container(
                         margin: EdgeInsets.only(left: 30, right: 30),
                         height: h * 4.5,
-                        color: Colors.amber,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
