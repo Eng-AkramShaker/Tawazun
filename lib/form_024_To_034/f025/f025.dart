@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable, avoid_unnecessary_containers, camel_case_types, prefer_const_constructors, sized_box_for_whitespace, non_constant_identifier_names
+// ignore_for_file: must_be_immutable, avoid_unnecessary_containers, camel_case_types, prefer_const_constructors, sized_box_for_whitespace, non_constant_identifier_names, unnecessary_string_escapes, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -7,7 +7,7 @@ import '../widgets024=034.dart';
 import 'f025Controller.dart';
 
 class F025 extends StatelessWidget {
-  F025({super.key});
+  const F025({super.key});
 
   @override
   Widget build(BuildContext context) {
