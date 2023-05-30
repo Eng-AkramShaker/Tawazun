@@ -4,34 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class F025Controller extends GetxController {
+  // List<TableRowData> tableData = List.generate(12, (_) => TableRowData());
  
 
-    List<String> selValue = [
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-    ];
+ List<String> selValue = List.generate(22, (_) => '');
 
-
+    
   List<String> text = [
     'Floor and stairway free of clutte',
     'Rug and carpets firmly in place',
@@ -59,13 +37,6 @@ class F025Controller extends GetxController {
    
  
 
-  
-  
-
-
-
-
-
 
     var date = DateTime.now();
 
@@ -76,35 +47,9 @@ class F025Controller extends GetxController {
     var signature = TextEditingController();
     var problemsInentifide = TextEditingController();
    
-
+    List<TextEditingController> comment = List.generate(22, (_) => TextEditingController());
     
-    List comment = [
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-      TextEditingController(),
-    ];
-
-
-
+    
 
   onChangeValue(dynamic value,  int i){
     selValue[i] = value;
@@ -112,13 +57,5 @@ class F025Controller extends GetxController {
   }
  
   
-
-
-    
-    
-
-
-
-
   
 }

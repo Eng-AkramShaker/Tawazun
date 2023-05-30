@@ -11,21 +11,6 @@ class F032 extends StatelessWidget {
 
   List<TableRowData> tableData = List.generate(12, (_) => TableRowData());
   List<TableRowData_2> tableData_2 = List.generate(12, (_) => TableRowData_2());
-  
-  List<List<TextEditingController>> textControllers = List.generate(
-      12, (_) => List.generate(6, (_) => TextEditingController()));
-  List<List<TextEditingController>> textControllers_2 = List.generate(
-      12, (_) => List.generate(1, (_) => TextEditingController()));
-  final List<String> columnTitles = [
-    'Medication Name',
-    'Dose',
-    'Freq',
-    'Route',
-    'Indication',
-    'POMs*',
-    'Continue',
-    'Remarke',
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +23,10 @@ class F032 extends StatelessWidget {
           body: ListView(
             children: [
               TopPageWithLable(
-                lable: controller.lable,
+                  lable: controller.lable,
                   screenWidth: screenWidth,
                   title: 'MEDICATION RECONCILLATION FORM '),
-
+              //=============== Table ========================================
               Center(
                 child: Padding(
                   padding:
@@ -59,78 +44,80 @@ class F032 extends StatelessWidget {
                             //This table row is for the table header
                             TableRow(children: [
                               Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('data'),
-                                  Text('data'),
-                                  Text('data'),
-                                  Text('data'),
+                                  text_widget(
+                                      text: 'Source of medication history:   ',
+                                      size: 12.0,
+                                      verticalPadding: 0.0,
+                                      horizontalPadding: 0.0),
+                                  Divider(),
+                                  text_widget(
+                                      text:
+                                          'Patient medication list Patient/family member(s)    ',
+                                      size: 12.0,
+                                      verticalPadding: 0.0,
+                                      horizontalPadding: 0.0),
+                                  Divider(),
+                                  text_widget(
+                                      text:
+                                          'Previous discharge paper work Patient\'s own drugs    ',
+                                      size: 12.0,
+                                      verticalPadding: 0.0,
+                                      horizontalPadding: 0.0),
+                                  Divider(),
+                                  Row(
+                                    children: [
+                                      text_widget(
+                                        text: 'Other',
+                                        size: 12.0,
+                                        horizontalPadding: 0.0,
+                                        verticalPadding: 0.0,
+                                      ),
+                                      text_field_widget(
+                                          textController: controller.other,
+                                          width: screenWidth / 5),
+                                    ],
+                                  ),
                                 ],
                               ),
                               Column(
                                 children: [
-                                  Text('data'),
-                                  Text('data'),
+                                  Row(
+                                    children: [
+                                      text_widget(
+                                        text: 'Primary Diagnosis: ',
+                                        size: 12.0,
+                                        horizontalPadding: 0.0,
+                                        verticalPadding: 0.0,
+                                      ),
+                                      text_field_widget(
+                                          textController:
+                                              controller.primaryDiagnosis,
+                                          width: screenWidth / 5),
+                                    ],
+                                  ),
+                                  Divider(),
+                                  Row(
+                                    children: [
+                                      text_widget(
+                                        text: 'Allergies:',
+                                        size: 12.0,
+                                        horizontalPadding: 0.0,
+                                        verticalPadding: 0.0,
+                                      ),
+                                      text_field_widget(
+                                          textController: controller.allergies,
+                                          width: screenWidth / 5),
+                                    ],
+                                  ),
                                 ],
                               ),
                             ]),
                           ]),
                       //================= Table title =================================
-                      Row(
-                        children: [
-                          Expanded(
-                            flex: 5,
-                            child: Table(
-                                columnWidths: const {
-                                  0: FlexColumnWidth(3),
-                                  1: FlexColumnWidth(1),
-                                  2: FlexColumnWidth(1),
-                                  3: FlexColumnWidth(1),
-                                  4: FlexColumnWidth(2),
-                                  5: FlexColumnWidth(1),
-                                },
-                                border: TableBorder.all(),
-                                children: [
-                                  //This table row is for the table header
-                                  TableRow(children: [
-                                    TitleText(columnTitles[0]),
-                                    TitleText(columnTitles[1]),
-                                    TitleText(columnTitles[2]),
-                                    TitleText(columnTitles[3]),
-                                    TitleText(columnTitles[4]),
-                                    TitleText(columnTitles[5]),
-                                  ]),
-                                ]),
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Table(
-                                columnWidths: const {
-                                  0: FlexColumnWidth(),
-                                },
-                                border: TableBorder.all(),
-                                children: [
-                                  //This table row is for the table header
-                                  TableRow(children: [
-                                    TitleText(columnTitles[6]),
-                                  ]),
-                                ]),
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Table(
-                                columnWidths: const {
-                                  0: FlexColumnWidth(),
-                                },
-                                border: TableBorder.all(),
-                                children: [
-                                  //This table row is for the table header
-                                  TableRow(children: [
-                                    TitleText(columnTitles[7]),
-                                  ]),
-                                ]),
-                          ),
-                        ],
-                      ),
+                      TableHeadTitle(),
                     ],
                   ),
                 ),
@@ -161,8 +148,8 @@ class F032 extends StatelessWidget {
                                 TableCell(
                                     child: TextField(
                                         textAlign: TextAlign.center,
-                                        controller: textControllers[rowIndex]
-                                            [i],
+                                        controller: controller
+                                            .textControllers[rowIndex][i],
                                         onChanged: (value) {
                                           switch (i) {
                                             case 0:
@@ -197,17 +184,15 @@ class F032 extends StatelessWidget {
                           columnWidths: const {
                             0: FlexColumnWidth(),
                           },
-                          children:
-                           [for (int i = 0; i < 12; i++) 
-                             buildRowWidget(
-                                  extControllerr: controller.selectedValue[0+i],
-                                  onChanged: (p0) => controller.onChangeValue(p0,i),
-                                  value: 'yes',
-                                  
-                                ),
-                          
+                          children: [
+                            for (int i = 0; i < 12; i++)
+                              buildRowWidget(
+                                extControllerr: controller.selectedValue[0 + i],
+                                onChanged: (p0) =>
+                                    controller.onChangeValue(p0, i),
+                                value: 'yes',
+                              ),
                           ],
-                          
                         ),
                       ),
                       Expanded(
@@ -225,8 +210,8 @@ class F032 extends StatelessWidget {
                                 TableCell(
                                     child: TextField(
                                         textAlign: TextAlign.center,
-                                        controller: textControllers_2[rowIndex]
-                                            [i],
+                                        controller: controller
+                                            .textControllers_2[rowIndex][i],
                                         onChanged: (value) {
                                           switch (i) {
                                             case 0:
@@ -242,7 +227,70 @@ class F032 extends StatelessWidget {
                   ),
                 ),
               ),
-
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: Center(
+                  child: Table(
+                    columnWidths: const {
+                      0: FlexColumnWidth(),
+                      1: FlexColumnWidth(),
+                      2: FlexColumnWidth(),
+                    },
+                    border: TableBorder.all(
+                        borderRadius: BorderRadius.all(Radius.zero)),
+                    children: [
+                      TableRow(children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            text_widget(
+                              text: 'Nurse/Pharmacist stamp &Sig.:  ',
+                              size: 12.0,
+                              horizontalPadding: 0.0,
+                              verticalPadding: 0.0,
+                            ),
+                            text_field_widget(
+                                textController: controller.nurse_Pharmacist[7],
+                                width: screenWidth / 7),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Center(
+                              child: Container(
+                                child: text_widget(
+                                  text: 'Time:Date:${controller.now}  ',
+                                  size: 12.0,
+                                  horizontalPadding: 0.0,
+                                  verticalPadding: 0.0,
+                                ),
+                              ),
+                            ),
+                            text_widget_h1(text: ''),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            text_widget(
+                              text: 'Physician stamp &Sig.:   ',
+                              size: 12.0,
+                              horizontalPadding: 0.0,
+                              verticalPadding: 0.0,
+                            ),
+                            text_field_widget(
+                                textController: controller.physician[7],
+                                width: screenWidth / 7),
+                          ],
+                        ),
+                      ]),
+                    ],
+                  ),
+                ),
+              ),
+//===================== Bottom Save =============================
               Center(
                 child: Container(
                   width: screenWidth / 8,
@@ -278,6 +326,10 @@ class F032 extends StatelessWidget {
 
                       controller.update();
                       print(controller.selectedValue);
+                      print(controller.column1);
+                      print(controller.column1_2);
+                      print(controller.column3);
+                      print(controller.column5);
                     },
                   ),
                 ),
@@ -286,10 +338,310 @@ class F032 extends StatelessWidget {
               BottomPage(
                   pageNumber: '1',
                   titleForm: 'F031-THHC MEDICATION RECONCILLATION FORM '),
+              Divider(),
+              //================================= Page Two ===================================
+              TopPageWithLable(
+                  lable: controller.lable,
+                  screenWidth: screenWidth,
+                  title: 'MEDICATION RECONCILLATION FORM '),
+              text_widget_h1(text: 'Added Medications'),
+              //================= Repeat Two Table ===============================
+              for (int i = 0; i < 7; i++)
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        top: 30.0, left: 30.0, right: 30.0),
+                    child: Column(
+                      children: [
+                        TableHeadTitle(),
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 5,
+                              child: Table(
+                                border: TableBorder.all(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.zero)),
+                                columnWidths: const {
+                                  0: FlexColumnWidth(3),
+                                  1: FlexColumnWidth(1),
+                                  2: FlexColumnWidth(1),
+                                  3: FlexColumnWidth(1),
+                                  4: FlexColumnWidth(2),
+                                  5: FlexColumnWidth(1),
+                                },
+                                children: [
+                                  TableRow(
+                                    children: [
+                                      TextField(
+                                        controller:
+                                            controller.MedicationName[0 + i],
+                                      ),
+                                      TextField(
+                                        controller: controller.Dose[0 + i],
+                                      ),
+                                      TextField(
+                                        controller: controller.Freq[0 + i],
+                                      ),
+                                      TextField(
+                                        controller: controller.Route[0 + i],
+                                      ),
+                                      TextField(
+                                        controller:
+                                            controller.Indication[0 + i],
+                                      ),
+                                      TextField(
+                                        controller: controller.POMs[0 + i],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Table(
+                                border: TableBorder.all(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.zero)),
+                                columnWidths: const {
+                                  0: FlexColumnWidth(),
+                                },
+                                children: [
+                                  buildRowWidget(
+                                    extControllerr:
+                                        controller.selectedValue_2[0 + i],
+                                    onChanged: (p0) =>
+                                        controller.onChangeValue_2(p0, 0 + i),
+                                    value: 'yes',
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Table(
+                                border: TableBorder.all(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.zero)),
+                                columnWidths: const {
+                                  0: FlexColumnWidth(),
+                                },
+                                children: [
+                                  TableRow(
+                                    children: [
+                                      TextField(
+                                        controller: controller.Remarks[0 + i],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        Table(
+                          columnWidths: const {
+                            0: FlexColumnWidth(),
+                            1: FlexColumnWidth(),
+                            2: FlexColumnWidth(),
+                            3: FlexColumnWidth(),
+                          },
+                          border: TableBorder.all(
+                              borderRadius: BorderRadius.all(Radius.zero)),
+                          children: [
+                            TableRow(children: [
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  text_widget(
+                                    text: 'Source: Hospital /clinic    ',
+                                    size: 12.0,
+                                    horizontalPadding: 0.0,
+                                    verticalPadding: 0.0,
+                                  ),
+                                  text_field_widget(
+                                      textController:
+                                          controller.Hospital_clinic[0 + i],
+                                      width: screenWidth / 7),
+                                ],
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  text_widget(
+                                    text: 'Nurse/Pharmacist stamp &Sig.:  ',
+                                    size: 12.0,
+                                    horizontalPadding: 0.0,
+                                    verticalPadding: 0.0,
+                                  ),
+                                  text_field_widget(
+                                      textController:
+                                          controller.nurse_Pharmacist[0 + i],
+                                      width: screenWidth / 7),
+                                ],
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Center(
+                                    child: Container(
+                                      child: text_widget(
+                                        text: 'Time:Date:${controller.now}  ',
+                                        size: 12.0,
+                                        horizontalPadding: 0.0,
+                                        verticalPadding: 0.0,
+                                      ),
+                                    ),
+                                  ),
+                                  text_widget_h1(text: ''),
+                                ],
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  text_widget(
+                                    text: 'Physician stamp &Sig.:   ',
+                                    size: 12.0,
+                                    horizontalPadding: 0.0,
+                                    verticalPadding: 0.0,
+                                  ),
+                                  text_field_widget(
+                                      textController:
+                                          controller.physician[0 + i],
+                                      width: screenWidth / 7),
+                                ],
+                              ),
+                            ]),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+              //===================== Bottom Save =============================
+              Center(
+                child: Container(
+                  width: screenWidth / 8,
+                  height: 50.0,
+                  margin: EdgeInsets.symmetric(vertical: 20.0),
+                  child: MaterialButton(
+                    color: Colors.teal.shade400,
+                    child: Text(
+                      'Save',
+                      style: TextStyle(
+                          fontSize: 18.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    onPressed: () {
+                      // Save data to GetX controllers
+
+                      controller.column1 =
+                          tableData.map((row) => row.column1).toList();
+                      controller.column2 =
+                          tableData.map((row) => row.column2).toList();
+                      controller.column3 =
+                          tableData.map((row) => row.column3).toList();
+                      controller.column4 =
+                          tableData.map((row) => row.column4).toList();
+                      controller.column5 =
+                          tableData.map((row) => row.column5).toList();
+                      controller.column6 =
+                          tableData.map((row) => row.column6).toList();
+                      //========= column 6 ==========
+                      controller.column1_2 =
+                          tableData_2.map((row) => row.column1_2).toList();
+
+                      controller.update();
+                      print(controller.selectedValue);
+                      print(controller.column1);
+                      print(controller.column1_2);
+                      print(controller.physician);
+                      print(controller.Hospital_clinic);
+                      print(controller.selectedValue_2);
+                      print(controller.nurse_Pharmacist);
+                    },
+                  ),
+                ),
+              ),
+              BottomPage(
+                  pageNumber: '2',
+                  titleForm: 'F031-THHC MEDICATION RECONCILLATION FORM '),
+              Divider(),
             ],
           ),
         );
       },
+    );
+  }
+}
+
+class TableHeadTitle extends StatelessWidget {
+  const TableHeadTitle({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final F032Controller controller = Get.put(F032Controller());
+    return Row(
+      children: [
+        Expanded(
+          flex: 5,
+          child: Table(
+              columnWidths: const {
+                0: FlexColumnWidth(3),
+                1: FlexColumnWidth(1),
+                2: FlexColumnWidth(1),
+                3: FlexColumnWidth(1),
+                4: FlexColumnWidth(2),
+                5: FlexColumnWidth(1),
+              },
+              border: TableBorder.all(),
+              children: [
+                //This table row is for the table header
+                TableRow(children: [
+                  TitleText(controller.columnTitles[0]),
+                  TitleText(controller.columnTitles[1]),
+                  TitleText(controller.columnTitles[2]),
+                  TitleText(controller.columnTitles[3]),
+                  TitleText(controller.columnTitles[4]),
+                  TitleText(controller.columnTitles[5]),
+                ]),
+              ]),
+        ),
+        Expanded(
+          flex: 1,
+          child: Table(
+              columnWidths: const {
+                0: FlexColumnWidth(),
+              },
+              border: TableBorder.all(),
+              children: [
+                //This table row is for the table header
+                TableRow(children: [
+                  TitleText(controller.columnTitles[6]),
+                ]),
+              ]),
+        ),
+        Expanded(
+          flex: 1,
+          child: Table(
+              columnWidths: const {
+                0: FlexColumnWidth(),
+              },
+              border: TableBorder.all(),
+              children: [
+                //This table row is for the table header
+                TableRow(children: [
+                  TitleText(controller.columnTitles[7]),
+                ]),
+              ]),
+        ),
+      ],
     );
   }
 }
@@ -333,7 +685,6 @@ class TableRowData_2 {
   });
 }
 
-
 class Radio_Widget extends StatelessWidget {
   final String value;
   final Object? extController;
@@ -358,11 +709,9 @@ class Radio_Widget extends StatelessWidget {
 }
 
 TableRow buildRowWidget(
-    {
-      required String value,
+    {required String value,
     required Object? extControllerr,
-    required Function(Object?)? onChanged
-    }) {
+    required Function(Object?)? onChanged}) {
   return TableRow(children: [
     Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -385,7 +734,7 @@ TableRow buildRowWidget(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Padding(
-        padding: const EdgeInsets.symmetric(vertical: 14.5),
+          padding: const EdgeInsets.symmetric(vertical: 14.5),
           child: Text(
             'N',
             style: TextStyle(fontWeight: FontWeight.bold),
@@ -393,7 +742,7 @@ TableRow buildRowWidget(
         ),
         Radio_Widget(
           value: 'no',
-            extController: extControllerr,
+          extController: extControllerr,
           onChanged: onChanged,
         ),
       ],

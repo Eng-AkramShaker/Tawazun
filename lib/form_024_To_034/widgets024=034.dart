@@ -70,7 +70,7 @@ class TopPage extends StatelessWidget {
     );
   }
 }
-//  color: Color.fromRGBO(33, 33, 33, 1)
+
 
 class text_field_widget extends StatelessWidget {
   text_field_widget({
@@ -91,7 +91,7 @@ class text_field_widget extends StatelessWidget {
     return Container(
       width: width,
       child: TextField(
-       
+       textAlign: TextAlign.center,
         keyboardType: type,
         controller: textController,
       ),

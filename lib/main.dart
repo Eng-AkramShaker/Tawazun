@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
       //
 
 
-      home: F025(),
+      home: F032(),
 
     );
   }

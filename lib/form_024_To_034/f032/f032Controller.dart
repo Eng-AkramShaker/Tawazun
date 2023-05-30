@@ -6,6 +6,10 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class F032Controller extends GetxController {
+  List<List<TextEditingController>> textControllers = List.generate(
+      12, (_) => List.generate(6, (_) => TextEditingController()));
+  List<List<TextEditingController>> textControllers_2 = List.generate(
+      12, (_) => List.generate(1, (_) => TextEditingController()));
   DateTime now = DateTime.now();
   String dateMonth = DateFormat.yMMMM().format(DateTime.now());
   String dateDay = DateFormat.d().format(DateTime.now());
@@ -23,29 +27,52 @@ class F032Controller extends GetxController {
   var serialNo = TextEditingController();
   var month = TextEditingController();
   var lable = TextEditingController();
+  var other = TextEditingController();
+  var allergies = TextEditingController();
+  var primaryDiagnosis = TextEditingController();
 
-  
-
-
-  List<String> selectedValue = [
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    
-
+  final List<String> columnTitles = [
+    'Medication Name',
+    'Dose',
+    'Freq',
+    'Route',
+    'Indication',
+    'POMs*',
+    'Continue',
+    'Remarke',
   ];
+  List<TextEditingController> MedicationName =
+      List.generate(7, (_) => TextEditingController());
+  List<TextEditingController> Dose =
+      List.generate(7, (_) => TextEditingController());
+  List<TextEditingController> Freq =
+      List.generate(7, (_) => TextEditingController());
+  List<TextEditingController> Route =
+      List.generate(7, (_) => TextEditingController());
+  List<TextEditingController> Indication =
+      List.generate(7, (_) => TextEditingController());
+  List<TextEditingController> POMs =
+      List.generate(7, (_) => TextEditingController());
+  List<TextEditingController> Remarks =
+      List.generate(7, (_) => TextEditingController());
+  List<TextEditingController> nurse_Pharmacist =
+      List.generate(8, (_) => TextEditingController());
+  List<TextEditingController> Hospital_clinic =
+      List.generate(7, (_) => TextEditingController());
+  List<TextEditingController> physician =
+      List.generate(8, (_) => TextEditingController());
+
+  List<String> selectedValue = List.generate(12, (_) => '');
 
   onChangeValue(dynamic value, int list) {
     selectedValue[list] = value;
+    update();
+  }
+
+  List<String> selectedValue_2 = List.generate(7, (_) => '');
+
+  onChangeValue_2(dynamic value, int list) {
+    selectedValue_2[list] = value;
     update();
   }
 }
