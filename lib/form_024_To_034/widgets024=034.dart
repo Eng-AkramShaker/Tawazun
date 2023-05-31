@@ -149,45 +149,48 @@ class TopPageWithLable extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              height: 75.0,
-              width: screenWidth / 5,
-              child: Image.asset('assets/images/log.png'),
-            ),
-             Padding(
-              padding: EdgeInsets.only(top: 20.0),
-              child: Text(
-                title,
-                style: TextStyle(
-                    fontSize: 1.9*screenWidth*0.01,
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromRGBO(33, 33, 33, 1)),
+        child: Container(
+          width: screenWidth,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                height: 75.0,
+                width: screenWidth / 5,
+                child: Image.asset('assets/images/log.png'),
               ),
-            ),
-            Container(
-              height: 100,
-              width:120,
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.black),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 0.0),
-                child: Center(
-                    child: Column(
-                      children: [
-                        Text('PLACE PATIENT LABLE',style: TextStyle(fontSize: 10.0),),
-                        text_field_widget(
-                        
-                          textController: lable, width: 100.0),
-                      ],
-                    )
+               Padding(
+                padding: EdgeInsets.only(top: 20.0),
+                child: Text(
+                  title,
+                  style: TextStyle(
+                      fontSize: 1.9*screenWidth*0.01,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromRGBO(33, 33, 33, 1)),
                 ),
               ),
-            ),
-          ],
+              Container(
+                height: 100,
+                width:120,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 0.0),
+                  child: Center(
+                      child: Column(
+                        children: [
+                          Text('PLACE PATIENT LABLE',style: TextStyle(fontSize: 10.0),),
+                          text_field_widget(
+                          
+                            textController: lable, width: 100.0),
+                        ],
+                      )
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
