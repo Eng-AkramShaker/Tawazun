@@ -1,5 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, camel_case_types, use_key_in_widget_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, file_names, avoid_unnecessary_containers, prefer_const_constructors, must_be_immutable, unused_local_variable
 
+import 'package:f011/form_011_To_023/F020/Controller/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../Controller/controller.dart';
@@ -16,7 +17,7 @@ class form_F020 extends StatelessWidget {
       builder: (ctrl) => SafeArea(
         child: Scaffold(
           // Costume AppBar -----------------------------------------------------
-          appBar: C_AppBar(context: context),
+          // appBar: C_AppBar(context: context),
 
           body: Container(
             padding: EdgeInsets.only(left: w / 5, right: w / 13),
@@ -45,7 +46,7 @@ class form_F020 extends StatelessWidget {
                               width: w / 3.0,
                               margin: EdgeInsets.only(bottom: 5),
                               child: C_TextFild(
-                                  filled: true,
+                                  // filled: true,
                                   TEXT_controller: ctrl.name_controller),
                             ),
                           ],
@@ -66,7 +67,7 @@ class form_F020 extends StatelessWidget {
                               width: w / 6,
                               margin: EdgeInsets.only(bottom: 5),
                               child: C_TextFild(
-                                  filled: true,
+                                  // filled: true,
                                   TEXT_controller: ctrl.Badge_controller),
                             ),
                           ],
@@ -154,7 +155,7 @@ class form_F020 extends StatelessWidget {
                           width: w / 5,
                           margin: EdgeInsets.only(bottom: 5),
                           child: C_TextFild(
-                              filled: true,
+                              // filled: true,
                               TEXT_controller: ctrl.Signature_controller),
                         ),
                         Padding(
@@ -174,7 +175,7 @@ class form_F020 extends StatelessWidget {
                           width: w / 5.5,
                           margin: EdgeInsets.only(bottom: 5),
                           child: C_TextFild(
-                              filled: true,
+                              // filled: true,
                               TEXT_controller: ctrl.Date_Signature_controller),
                         ),
                         Padding(
@@ -198,7 +199,7 @@ class form_F020 extends StatelessWidget {
                             width: w / 5,
                             margin: EdgeInsets.only(bottom: 5),
                             child: C_TextFild(
-                                filled: true,
+                                // filled: true,
                                 TEXT_controller: ctrl.THHCManager_controller),
                           ),
                           Padding(
@@ -218,7 +219,7 @@ class form_F020 extends StatelessWidget {
                             width: w / 5.5,
                             margin: EdgeInsets.only(bottom: 5),
                             child: C_TextFild(
-                                filled: true,
+                                // filled: true,
                                 TEXT_controller:
                                     ctrl.Date_THHCManage_controller),
                           ),
