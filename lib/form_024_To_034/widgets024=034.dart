@@ -22,12 +22,12 @@ class BottomPage extends StatelessWidget {
             verticalPadding: 10.0,
             horizontalPadding: 20.0,
             text: titleForm,
-            size: 10.0,
+            size:  12.0,
           ),
         ),
         Padding(
            padding: const EdgeInsets.only(top: 20.0, right: 100.0, bottom: 20.0),
-          child: Text(pageNumber,style: TextStyle(fontSize: 1.9*screenWidth*0.01),),
+          child: Text(pageNumber,style: TextStyle(fontSize: 12.0),),
         )
       ],
     );
@@ -123,7 +123,7 @@ class text_widget extends StatelessWidget {
           horizontal: horizontalPadding, vertical: verticalPadding),
       child: Text(
         text,
-        style: TextStyle(fontSize: 1.9*screenWidth*0.01, fontWeight: weight),
+        style: TextStyle(fontSize: size, fontWeight: weight),
       ),
     );
   }
