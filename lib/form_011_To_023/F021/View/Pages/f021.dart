@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, camel_case_types, use_key_in_widget_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, file_names, avoid_unnecessary_containers, prefer_const_constructors, must_be_immutable, unused_local_variable, prefer_const_constructors_in_immutables, division_optimization, prefer_collection_literals, prefer_typing_uninitialized_variables
 
-import 'package:f011/F021/View/Widgets/tables.dart';
+import 'package:f011/form_011_To_023/F021/View/Widgets/tables.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../Controller/controller.dart';

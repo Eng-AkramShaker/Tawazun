@@ -1,10 +1,6 @@
-// Table Other physicians  -------------------------------------------------------------
-
-// ignore_for_file: non_constant_identifier_names
-
 // Table SERVICES  -------------------------------------------------------------
 
-import 'package:f011/F021/View/Widgets/textField.dart';
+import 'package:f011/form_011_To_023/F021/View/Widgets/textField.dart';
 import 'package:flutter/material.dart';
 
 Widget Custom_Table({
