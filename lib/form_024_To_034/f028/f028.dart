@@ -1,9 +1,11 @@
-import 'package:f011/form_024_To_034/f028/f028Controller.dart';
-import 'package:f011/form_024_To_034/f029/f029.dart';
+// ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api, sized_box_for_whitespace, avoid_unnecessary_containers, camel_case_types, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../f034/f034.dart';
 import '../widgets024=034.dart';
+import 'f028Controller.dart';
 
 class F028 extends StatefulWidget {
   @override
@@ -18,6 +20,8 @@ class _F028State extends State<F028> {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+  
+    
       backgroundColor: Colors.white,
       // appBar: AppBar(title: Text('Table Example')),
       body: ListView(
@@ -77,25 +81,28 @@ class _F028State extends State<F028> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      height: screenHeight / 3.25,
-                      width: screenWidth / 3.25,
-                      child: Image.asset('assets/images/image_1.png'),
-                    ),
-                    SizedBox(
-                      height: screenHeight / 3.25,
-                      width: screenWidth / 3.25,
-                      child: Image.asset('assets/images/image_2.png'),
-                    ),
-                    SizedBox(
-                      height: screenHeight / 3.25,
-                      width: screenWidth / 3.25,
-                      child: Image.asset('assets/images/image_3.png'),
-                    ),
-                  ],
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        height: screenHeight / 3.25,
+                        width: screenWidth / 3.25,
+                        child: Image.asset('assets/images/image_1.png'),
+                      ),
+                      SizedBox(
+                        height: screenHeight / 3.25,
+                        width: screenWidth / 3.25,
+                        child: Image.asset('assets/images/image_2.png'),
+                      ),
+                      SizedBox(
+                        height: screenHeight / 3.25,
+                        width: screenWidth / 3.25,
+                        child: Image.asset('assets/images/image_3.png'),
+                      ),
+                    ],
+                  ),
                 ),
               ),
 
@@ -380,7 +387,7 @@ class _F028State extends State<F028> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20.0,),
+                  const SizedBox(height: 20.0,),
                   text_widget(text: '*See F047-THHC MAR (Medication Administration Record)',size: 14.0,
                   horizontalPadding: 20.0,verticalPadding: 0.0,weight: FontWeight.bold,
                   ),
@@ -394,44 +401,14 @@ class _F028State extends State<F028> {
                   pageNumber: '2',
                   titleForm: 'F028-THHC COMPREHENSIVE PAIN ASSESSMENT CHART '),
               const Divider(),
-        ],
-      ),
-    );
+        ],)
+      );
+      
+    
   }}
 
 
-  class TableHeadTitle_1 extends StatelessWidget {
-  const TableHeadTitle_1({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final F028Controller controller = Get.put(F028Controller());
-    return Row(
-      children: [
-        Expanded(
-          flex: 5,
-          child: Table(
-              columnWidths: const {
-                0: FlexColumnWidth(1),
-                1: FlexColumnWidth(2),
-              },
-              border: TableBorder.all(),
-              children: [
-                //This table row is for the table header
-                TableRow(children: [
-                  TitleText(controller.columnTitles_1[0], Colors.teal.shade400,
-                      Colors.white),
-                  TitleText(controller.columnTitles_1[1], Colors.teal.shade400,
-                      Colors.white),
-                ]),
-              ]),
-        ),
-      ],
-    );
-  }
-}
+  
 Widget TitleText(String title, Color color, Color textColor) {
   return Container(
     padding: const EdgeInsets.symmetric(vertical: 10),

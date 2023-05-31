@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, file_names, sized_box_for_whitespace, must_be_immutable, camel_case_types, type_init_formals
+// ignore_for_file: prefer_const_constructors, file_names, sized_box_for_whitespace, must_be_immutable, camel_case_types, type_init_formals, unused_local_variable
 
 import 'package:flutter/material.dart';
 
@@ -145,45 +145,51 @@ class TopPageWithLable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Container(
-          height: 75.0,
-          width: screenWidth / 4,
-          child: Image.asset('assets/images/log.png'),
-        ),
-         Padding(
-          padding: EdgeInsets.only(top: 20.0),
-          child: Text(
-            title,
-            style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: Color.fromRGBO(33, 33, 33, 1)),
-          ),
-        ),
-        Container(
-          height: 110.0,
-          width: 200.0,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 0.0),
-            child: Center(
-                child: Column(
-                  children: [
-                    Text('PLACE PATIENT LABLE'),
-                    text_field_widget(
-                    
-                      textController: lable, width: 150),
-                  ],
-                )
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              height: 75.0,
+              width: screenWidth / 5,
+              child: Image.asset('assets/images/log.png'),
             ),
-          ),
+             Padding(
+              padding: EdgeInsets.only(top: 20.0),
+              child: Text(
+                title,
+                style: TextStyle(
+                    fontSize: 1.9*screenWidth*0.01,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromRGBO(33, 33, 33, 1)),
+              ),
+            ),
+            Container(
+              height: 100,
+              width:120,
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 0.0),
+                child: Center(
+                    child: Column(
+                      children: [
+                        Text('PLACE PATIENT LABLE',style: TextStyle(fontSize: 10.0),),
+                        text_field_widget(
+                        
+                          textController: lable, width: 100.0),
+                      ],
+                    )
+                ),
+              ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

@@ -1,11 +1,55 @@
 // ignore: file_names
-// ignore_for_file: file_names, duplicate_ignore, empty_constructor_bodies, non_constant_identifier_names
+// ignore_for_file: file_names, duplicate_ignore, empty_constructor_bodies, non_constant_identifier_names, avoid_print
 
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class F028Controller extends GetxController {
   
+  
+
+  
+
+  // DateTime now = DateTime.now();
+
+  
+  // var lable = TextEditingController();
+  // var CodeStatus = TextEditingController();
+  // var ReviewDate = TextEditingController();
+
+
+
+
+
+  
+  
+
+
+
+ 
+  
+  // List<List<String>> tableData = List.generate(
+  //   46, (rowIndex) => List.generate(
+  //     27, (colIndex) => '',
+  //   ),
+  // );
+  // updateData(int rowIndex, int colIndex, String value) {
+  //   tableData[rowIndex][colIndex] = value;
+  //   update();
+  //   print(tableData);
+  // }
+
+
+
+  
+
+  // List<List<String>> textTableData_1 =
+  //  [
+  //   ['Time:','Initials','Full name and Title:','Employee Number:'],
+  //   ['Time:','Initials','Full name and Title:','Employee Number:'],
+  //   ['Time:','Initials','Full name and Title:','Employee Number:'],
+  //  ];
+
   final List<String> columnTitles_1 = [
     'PATIENT AGE',
     'TOOLS TO BE USED',
