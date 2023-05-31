@@ -26,7 +26,7 @@ class F038 extends StatelessWidget {
                     Expanded(
                       flex: 30,
                       child: Image.asset(
-                        'assets/ic_app.jpg',
+                        'assets/images/tawazun-logo.png',
                         height: 70,
                       ),
                     ),
@@ -708,7 +708,7 @@ class F038 extends StatelessWidget {
                     Expanded(
                       flex: 30,
                       child: Image.asset(
-                        'assets/ic_app.jpg',
+                        'assets/images/tawazun-logo.png',
                         height: 70,
                       ),
                     ),

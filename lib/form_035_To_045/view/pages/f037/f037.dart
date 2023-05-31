@@ -22,7 +22,7 @@ class F037 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset('assets/ic_app.jpg',
+                  Image.asset('assets/images/tawazun-logo.png',
                   height: 50,
                   ),
                    Align(

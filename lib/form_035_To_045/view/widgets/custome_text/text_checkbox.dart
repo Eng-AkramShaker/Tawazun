@@ -7,9 +7,9 @@ class TextCheckbox extends StatelessWidget {
   TextAlign? textAlign;
   double? fontSize;
   TextDirection? textDirection;
+  FontWeight? fontWeight;
 
-
-  TextCheckbox({required this.title,required this.color,this.textAlign,this.fontSize,this.textDirection});
+  TextCheckbox({required this.title,required this.color,this.textAlign,this.fontSize,this.textDirection,this.fontWeight});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class TextCheckbox extends StatelessWidget {
         style: TextStyle(
           color: color,
           fontSize: fontSize,
-          fontWeight: FontWeight.w600,
+          fontWeight: fontWeight,
         ),
         textAlign: textAlign,
       ),

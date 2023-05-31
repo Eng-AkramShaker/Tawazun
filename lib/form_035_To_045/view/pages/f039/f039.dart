@@ -32,7 +32,7 @@ class F039 extends StatelessWidget {
                            child: Column(
                              children: [
                                Image.asset(
-                                 'assets/ic_app.jpg',
+                                 'assets/images/tawazun-logo.png',
                                  height: 70,
                                ),
                                MyTitleText(title: 'Oxygen Content',color: Colors.black, fontSize: 17,)
@@ -43,7 +43,7 @@ class F039 extends StatelessWidget {
                            child: Column(
                              children: [
                                Image.asset(
-                                 'assets/ic_app.jpg',
+                                 'assets/images/tawazun-logo.png',
                                  height: 70,
                                ),
                                MyTitleText(title: 'Oxygen Content',color: Colors.black, fontSize: 17,)
@@ -54,7 +54,7 @@ class F039 extends StatelessWidget {
                            child: Column(
                              children: [
                                Image.asset(
-                                 'assets/ic_app.jpg',
+                                 'assets/images/tawazun-logo.png',
                                  height: 70,
                                ),
                                MyTitleText(title: 'Oxygen Content',color: Colors.black, fontSize: 17,)
