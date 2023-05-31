@@ -202,6 +202,7 @@ class F044 extends StatelessWidget {
                                 Expanded(child:   MyTextFormField(controller: f044Controller.fullNameARController,
                                   hintMaxLine: 1,
                                   textDirection:  TextDirection.rtl,
+                                  textAlign: TextAlign.right,
                                   hintText: '________________________________________',
                                   hintStyle: const TextStyle(
                                     overflow: TextOverflow.visible,
@@ -210,6 +211,7 @@ class F044 extends StatelessWidget {
                                 MyTitleText(title: 'انا الموقع أدناه (الاسم بالكامل):',
                                     color: Colors.black,
                                     textDirection: TextDirection.rtl,
+
                                     fontSize: 11),
                               ],
                             ),
@@ -326,12 +328,11 @@ class F044 extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                const Spacer(),
-                                const Spacer(),
                                 Expanded(
                                   child: MyTextFormField(controller: f044Controller.patientNameARController,
                                     hintText: '___________________________',
                                     textDirection: TextDirection.rtl,
+                                    textAlign: TextAlign.right,
                                     hintStyle: const TextStyle(
                                       overflow: TextOverflow.visible
                                     ),
@@ -1082,29 +1083,27 @@ class F044 extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              const Spacer(),
-                              Expanded(child: SizedBox()),
                               Expanded(
                                 child: MyTextFormField(
                                   controller: f044Controller.signatureOfPatientARController,
                                   hintText: '___________________________________________',
                                   textDirection: TextDirection.rtl,
+                                  textAlign: TextAlign.right,
                                   hintStyle: myHintStyle(),
                                 ),
                               ),
-                              TextCheckbox(title: 'توقيع المريض/ولي الأمر:', color: Colors.black,
+                              MyTitleText(title: 'توقيع المريض/ولي الأمر:', color: Colors.black,
                                 textDirection: TextDirection.rtl,
                               ),
                             ],
                           ),
                           Row(
                             children: [
-                              const Spacer(),
-                              const Spacer(),
                               Expanded(
                                 child: MyTextFormField(
                                   controller: f044Controller.dateAndTimeARController1,
                                   hintText: '_____________________________________',
+                                  textAlign: TextAlign.right,
                                 hintStyle: myHintStyle(),
 
                                 ),
@@ -1121,12 +1120,11 @@ class F044 extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              const Spacer(),
-                              Expanded(child: SizedBox()),
                               Expanded(
                                 child: MyTextFormField(
                                   controller: f044Controller.staffNameARController,
                                   hintText: '_____________________________________',
+                                  textAlign: TextAlign.right,
                                   hintStyle: myHintStyle(),
                                 ),
                               ),
@@ -1138,29 +1136,29 @@ class F044 extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              const Spacer(),
-                              Expanded(child: SizedBox()),
+
                               Expanded(
                                 child: MyTextFormField(
                                   controller: f044Controller.idNumberARController1,
                                   hintText: '_____________________________________',
                                   hintStyle: myHintStyle(),
+                                  textAlign: TextAlign.right,
                                 ),
                               ),
-                              TextCheckbox(
+                              MyTitleText(
                                 title: 'الرقم الوظيفي:', color: Colors.black,
                                 textDirection: TextDirection.rtl,),
                             ],
                           ),
                           Row(
                             children: [
-                              const Spacer(),
-                              Expanded(child: SizedBox()),
+
                               Expanded(
                                 child: MyTextFormField(
                                   controller: f044Controller.signatureARController1,
                                   hintText: '_____________________________________',
                                   hintStyle: myHintStyle(),
+                                  textAlign: TextAlign.right,
                                 ),
                               ),
                               MyTitleText(title: 'التوقيع:', color: Colors.black  ,textDirection: TextDirection.rtl,),
@@ -1169,13 +1167,13 @@ class F044 extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              const Spacer(),
-                              Expanded(child: SizedBox()),
+
                               Expanded(
                                 child: MyTextFormField(
                                   controller: f044Controller.dateAndTimeARController2,
                                   hintText: '_____________________________________',
                                   hintStyle: myHintStyle(),
+                                  textAlign: TextAlign.right,
                                 ),
                               ),
                               MyTitleText(title: 'التاريخ والوقت:', color: Colors.black,  textDirection: TextDirection.rtl,),
@@ -1186,13 +1184,13 @@ class F044 extends StatelessWidget {
                           MyTitleText(title: 'الشاهد الثاني', color: Colors.black,  textDirection: TextDirection.rtl,),
                           Row(
                             children: [
-                              const Spacer(),
-                              Expanded(child: SizedBox()),
+
                               Expanded(
                                 child: MyTextFormField(
                                   controller: f044Controller.staffNameARController2,
                                   hintText: '_____________________________________',
                                   hintStyle: myHintStyle(),
+                                  textAlign: TextAlign.right,
                                 ),
                               ),
                               TextCheckbox(title: 'إسم ممثل الرعاية الطبيه المنزليه:', color: Colors.black,  textDirection: TextDirection.rtl,),
@@ -1201,13 +1199,13 @@ class F044 extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              const Spacer(),
-                              Expanded(child: SizedBox()),
+
                               Expanded(
                                 child: MyTextFormField(
                                   controller: f044Controller.idNumberARController2,
                                   hintText: '_____________________________________',
                                   hintStyle: myHintStyle(),
+                                  textAlign: TextAlign.right,
                                 ),
                               ),
                               MyTitleText(title: 'الرقم الوظيفي:', color: Colors.black,  textDirection: TextDirection.rtl,),
@@ -1216,13 +1214,13 @@ class F044 extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              const Spacer(),
-                              Expanded(child: SizedBox()),
+
                               Expanded(
                                 child: MyTextFormField(
                                   controller: f044Controller.signatureARController2,
                                   hintText: '_____________________________________',
                                   hintStyle: myHintStyle(),
+                                  textAlign: TextAlign.right,
                                 ),
                               ),
                               MyTitleText(title: 'التوقيع:', color: Colors.black,  textDirection: TextDirection.rtl,),
@@ -1231,13 +1229,13 @@ class F044 extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              const Spacer(),
-                              Expanded(child: SizedBox()),
+
                               Expanded(
                                 child: MyTextFormField(
                                   controller: f044Controller.dateAndTimeARController3,
                                   hintText: '_____________________________________',
                                   hintStyle: myHintStyle(),
+                                  textAlign: TextAlign.right,
                                 ),
                               ),
                               MyTitleText(title: 'التاريخ والوقت:', color: Colors.black,  textDirection: TextDirection.rtl,),

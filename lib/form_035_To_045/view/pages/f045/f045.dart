@@ -641,6 +641,7 @@ class F045 extends StatelessWidget {
                                     Expanded(child: MyTextFormField(
                                       controller: f045Controller.toARController,
                                       textDirection: TextDirection.rtl,
+                                      textAlign: TextAlign.right,
                                       hintText: '______________________________',
                                       hintStyle: TextStyle(
                                           overflow: TextOverflow.visible
@@ -651,6 +652,7 @@ class F045 extends StatelessWidget {
                                       controller: f045Controller.fromARController,
                                       hintText: '______________________________',
                                       textDirection: TextDirection.rtl,
+                                      textAlign: TextAlign.right,
                                       hintStyle: TextStyle(
                                           overflow: TextOverflow.visible
                                       ),

@@ -6,17 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b9d72495-7843-4b0f-836d-09a46400ed59" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f035/f035.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f035/f035.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f036/f036.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f036/f036.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f037/f037.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f037/f037.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f038/f038.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f038/f038.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f039/f039.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f039/f039.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f040/f040.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f040/f040.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f041/f041.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f041/f041.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f042/f042.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f042/f042.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f044/f044.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f044/f044.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_035_To_045/view/widgets/custom_textform_field/my_text_form_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_035_To_045/view/widgets/custom_textform_field/my_text_form_field.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/form_035_To_045/view/widgets/custome_text/text_checkbox.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_035_To_045/view/widgets/custome_text/text_checkbox.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f045/f045.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/form_035_To_045/view/pages/f045/f045.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685559630705</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="f045">
+      <created>1685565889055</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685565889055</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -105,6 +103,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <MESSAGE value="my commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="my commit" />
+    <MESSAGE value="f045" />
+    <option name="LAST_COMMIT_MESSAGE" value="f045" />
   </component>
 </project>
