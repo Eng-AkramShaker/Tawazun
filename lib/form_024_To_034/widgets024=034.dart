@@ -48,25 +48,30 @@ class TopPage extends StatelessWidget {
   Widget build(BuildContext context) {
                     final screenWidth = MediaQuery.of(context).size.width;
 
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Container(
-          height: 75.0,
-          width: screenWidth / 4,
-          child: Image.asset('assets/images/log.png'),
+    return SingleChildScrollView(scrollDirection: Axis.horizontal,
+      child: Container(
+        width: screenWidth,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              height: 75.0,
+              width: screenWidth / 4,
+              child: Image.asset('assets/images/log.png'),
+            ),
+             Padding(
+              padding: EdgeInsets.only(top: 20.0),
+              child: Text(
+                title,
+                style: TextStyle(
+                    fontSize: 1.9*screenWidth*0.01,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromRGBO(33, 33, 33, 1)),
+              ),
+            ),
+          ],
         ),
-         Padding(
-          padding: EdgeInsets.only(top: 20.0),
-          child: Text(
-            title,
-            style: TextStyle(
-                fontSize: 1.9*screenWidth*0.01,
-                fontWeight: FontWeight.bold,
-                color: Color.fromRGBO(33, 33, 33, 1)),
-          ),
-        ),
-      ],
+      ),
     );
   }
 }
