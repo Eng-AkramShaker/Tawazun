@@ -23,22 +23,65 @@ class F019Controller extends GetxController {
 
 
 
-  
-  
+  final List<String> titleTable_1 =
+   [
+    'Competency /Performance criteria',
+    'Self - assessment',
+    'Preceptor evaluation',
+   ];
+
+
+   final List<String> titleTable_2 =
+   [
+    'Demonstrate Knowledge and skills in the following Safety measures',
+    '1',
+    '2',
+    '3',
+    'Date met ',
+    'CVM',
+    'Discuss and apply major functions \n pertinent to staff according to THHC policies, practices and standards of care: ',
+   ];  
+
+
+
+    final List<String> titleColumnTable =
+     [
+      'Home safety measures ',
+      'Unit specific Fire safety and fire escape routes',
+      'Electrical safety',
+      'Unit specific Disaster response plan',
+      'Emergency codes and appropriate responses ',
+      'Rapid Response Team ',
+      'Management of hazardous material ',
+      'Knowledge regarding Material Safety Data Sheets MSDS',
+      'Manage chemical spills',
+      'Usage of eye wash station ',
+      'Radiation Safety',
+      'Radioactive Iodine management ',
+      'Safety daily unit quality checking\'s (O2, Room temp, refrigerator, POCT equipment',
+      'Successfully demonstrate safe use of medical equipment (check equipment list) ',
+      'Equipment Issuance:',
+      '-	Staff Bags ',
+      '-	Others ',
+      '-	Equipment Loan Process',
+   
+     ];
 
 
 
  
   
-  List<List<String>> tableData = List.generate(
-    48, (rowIndex) => List.generate(
-      27, (colIndex) => '',
+  List<List<String>> tableData_1 = List.generate(
+    18, (rowIndex) => List.generate(
+      5, (colIndex) => '',
     ),
   );
-  updateData(int rowIndex, int colIndex, String value) {
-    tableData[rowIndex][colIndex] = value;
+
+
+  updateData_1(int rowIndex, int colIndex, String value) {
+    tableData_1[rowIndex][colIndex] = value;
     update();
-    print(tableData);
+    print(tableData_1);
   }
 
 final List<String> tableDataTwo = [

@@ -1,25 +1,22 @@
-// ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api, sized_box_for_whitespace, avoid_unnecessary_containers, camel_case_types, non_constant_identifier_names
+// ignore_for_file: sized_box_for_whitespace, avoid_unnecessary_containers, non_constant_identifier_names
 
+import 'package:f011/form_024_To_034/f028/f028Controller.dart';
+import 'package:f011/form_024_To_034/f033/f033.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../f034/f034.dart';
-import '../widgets024=034.dart';
-import 'f028Controller.dart';
+import '../widgets024To034.dart';
 
-class F028 extends StatefulWidget {
-  @override
-  _F028State createState() => _F028State();
-}
-
-class _F028State extends State<F028> {
-  final F028Controller controller = Get.put(F028Controller());
+class F028 extends StatelessWidget {
+  const F028({super.key});
 
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
-    return Scaffold(
+    return GetBuilder<F028Controller>(
+      init: F028Controller(),
+      builder: (controller) => Scaffold(
   
     
       backgroundColor: Colors.white,
@@ -401,13 +398,10 @@ class _F028State extends State<F028> {
                   pageNumber: '2',
                   titleForm: 'F028-THHC COMPREHENSIVE PAIN ASSESSMENT CHART '),
               const Divider(),
-        ],)
+        ],))
       );
-      
-    
-  }}
-
-
+  }
+}
   
 Widget TitleText(String title, Color color, Color textColor) {
   return Container(

@@ -1,27 +1,22 @@
-// ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api, sized_box_for_whitespace, avoid_unnecessary_containers, camel_case_types, non_constant_identifier_names
+// ignore_for_file: sized_box_for_whitespace, non_constant_identifier_names
 
+import 'package:f011/form_024_To_034/f026/f026Controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../f034/f034.dart';
-import '../widgets024=034.dart';
-import 'f026Controller.dart';
+import '../widgets024To034.dart';
 
-class F026 extends StatefulWidget {
-  @override
-  _F026State createState() => _F026State();
-}
-
-class _F026State extends State<F026> {
-  final F026Controller controller = Get.put(F026Controller());
+class F026 extends StatelessWidget {
+  const F026({super.key});
 
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
-    return Scaffold(
+    return GetBuilder<F026Controller>(
+      
+      init: F026Controller(),
+      builder: (controller) => Scaffold(
       backgroundColor: Colors.white,
-      // appBar: AppBar(title: Text('Table Example')),
       body: ListView(
         children: [
           TopPageWithLable(
@@ -180,14 +175,12 @@ class _F026State extends State<F026> {
               const Divider(),
         ],
     
-      )
+      ))
       );
-      
-    
-  }}
+  }
+}
 
 
-  
 Widget TitleText(String title, Color color, Color textColor) {
   return Container(
     padding: const EdgeInsets.symmetric(vertical: 10),

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../widgets024=034.dart';
+import '../widgets024To034.dart';
 import 'f033Controller.dart';
 
 class F033 extends StatelessWidget {

@@ -1,16 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:f011/form_024_To_034/f025/f025.dart';
-import 'package:f011/form_024_To_034/f027/f027.dart';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
 
 import 'form_024_To_034/f019/f019.dart';
-import 'form_024_To_034/f024/f024.dart';
 import 'form_024_To_034/f026/f026.dart';
-import 'form_024_To_034/f028/f028.dart';
-import 'form_024_To_034/f030/f030.dart';
+
 
 
 
@@ -51,7 +48,7 @@ class MyApp extends StatelessWidget {
       //
 
 
-      home: F019(),
+      home: F026(),
 
     );
   }
