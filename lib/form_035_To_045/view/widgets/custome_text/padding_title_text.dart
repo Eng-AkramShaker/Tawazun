@@ -13,12 +13,13 @@ class PaddingTitleText extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Text(
         title,
+        maxLines: 1,
         style: TextStyle(
           color: color,
-          fontSize: 17,
+          fontSize: 15,
           fontWeight: FontWeight.bold,
         ),
-        textAlign: textAlign,
+        textAlign: textAlign ?? TextAlign.center,
       ),
     );
   }

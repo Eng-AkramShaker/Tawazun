@@ -24,6 +24,8 @@ class TextCheckbox extends StatelessWidget {
           fontWeight: fontWeight,
         ),
         textAlign: textAlign,
+        maxLines: 1,
+          overflow: TextOverflow.ellipsis
       ),
     );
   }
