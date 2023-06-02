@@ -8,6 +8,106 @@ import 'package:f011/form_011_To_023/F011/View/Widgets/textField.dart';
 import 'package:flutter/material.dart';
 
 // =====================================================================================
+Widget Custom_Table_Disorders({
+  required Specification_1_controller,
+  required R_controller,
+  required L_controller,
+  required Specification_2_controller,
+  required text_1,
+  required text_2,
+  required context,
+}) {
+  final w = MediaQuery.of(context).size.width;
+
+  return Center(
+    child: SizedBox(
+      height: 20,
+      width: double.infinity,
+      child: Stack(children: [
+        Positioned(
+          left: 0,
+          child: SizedBox(
+            width: w / 2.2,
+            child: Table(
+              border: TableBorder.all(),
+              children: [
+                TableRow(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(
+                            text_1,
+                            style: TextStyle(fontSize: 1 * w * 0.01),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                        padding: const EdgeInsets.all(5),
+                        child: C_TextField(
+                            TEXT_controller: Specification_1_controller)),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+        //
+        Positioned(
+          right: 0,
+          child: SizedBox(
+            width: w / 2.2,
+            child: Table(
+              border: TableBorder.all(),
+              columnWidths: const {
+                0: FlexColumnWidth(3),
+                1: FlexColumnWidth(1),
+                2: FlexColumnWidth(1),
+                3: FlexColumnWidth(3),
+              },
+              children: [
+                TableRow(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(
+                            'Sensitivity',
+                            style: TextStyle(fontSize: 1 * w * 0.01),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: C_TextField(TEXT_controller: R_controller),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: C_TextField(TEXT_controller: L_controller),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: C_TextField(
+                          TEXT_controller: Specification_2_controller),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ]),
+    ),
+  );
+}
+
+// // =====================================================================================
 
 Widget Custom_Table_Range({
   required L_PROM,
