@@ -233,7 +233,6 @@ class F043Controller extends GetxController {
   bool esphagostomyTube = false;
   bool gTube = false;
   bool jejunostomyTube = false;
-
   //Todo:Skin
   bool intact = false;
   bool pallor = false;
