@@ -37,7 +37,7 @@ class MyTextFormField extends StatelessWidget {
         hintMaxLines: hintMaxLine,
         hintText: hintText,
         hintStyle: hintStyle ?? TextStyle(
-          overflow: TextOverflow.visible
+          overflow: TextOverflow.visible,
         ),
         suffixIcon: suffixIcon,
       ),
