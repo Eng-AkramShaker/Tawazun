@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../constant/font_style.dart';
@@ -483,7 +485,7 @@ class Form52 extends StatelessWidget {
                       //   const SizedBox(width: 60,),
                       Row(
                         children: [
-                          buildCheckBox(controller.yesEQUEMENT, (val1) {
+                          buildCheckBox(controller.yes, (val1) {
                             controller.yesEQUEMENT = val1!;
                             controller.update();
                           }, "YES", 12)

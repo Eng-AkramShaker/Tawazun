@@ -1,15 +1,17 @@
+// ignore_for_file: empty_statements, dead_code
+
 import 'package:flutter/material.dart';
 
 import '../../../constant/font_style.dart';
 import '../table_title_widget.dart';
 
 class WidgetExcelTitle extends StatelessWidget {
-  const WidgetExcelTitle({Key? key,
+  const WidgetExcelTitle({
+    Key? key,
     required this.textTitle,
-   // this.color,
-
+    // this.color,
   }) : super(key: key);
-  final String  textTitle;
+  final String textTitle;
   //final Color? color;
 
   @override

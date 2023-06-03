@@ -1,9 +1,12 @@
+// ignore_for_file: must_be_immutable, file_names
+
 import 'package:flutter/material.dart';
 
 class TextAndTextFiled extends StatelessWidget {
-   TextAndTextFiled({Key? key,
+  TextAndTextFiled({
+    Key? key,
     required this.textTitle,
-     required this.controller,
+    required this.controller,
   }) : super(key: key);
   final String textTitle;
   TextEditingController controller = TextEditingController();
@@ -18,16 +21,18 @@ class TextAndTextFiled extends StatelessWidget {
         children: [
           Expanded(
             child: SizedBox(
-              child: Text(textTitle,
-                style:  TextStyle(
+              child: Text(
+                textTitle,
+                style: TextStyle(
                     fontWeight: FontWeight.w500,
-                    fontSize: 1*w*0.01, color: Colors.grey),
+                    fontSize: 1 * w * 0.01,
+                    color: Colors.grey),
               ),
             ),
           ),
-           Expanded(
-            child:  SizedBox(
-             // width: 100,
+          Expanded(
+            child: SizedBox(
+              // width: 100,
               child: TextField(
                 controller: controller,
               ),
@@ -36,6 +41,5 @@ class TextAndTextFiled extends StatelessWidget {
         ],
       ),
     );
-
   }
 }
