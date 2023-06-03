@@ -47,6 +47,7 @@ Widget C_AppBar({required context, required text}) {
                 height: 100,
                 width: 200,
                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
                   border: Border.all(color: Colors.black),
                 ),
                 child: Text(
