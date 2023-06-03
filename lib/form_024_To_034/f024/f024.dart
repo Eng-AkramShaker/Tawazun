@@ -1,10 +1,11 @@
-// ignore_for_file: must_be_immutable, avoid_unnecessary_containers, camel_case_types, prefer_const_constructors, sized_box_for_whitespace
+// ignore_for_file: must_be_immutable, avoid_unnecessary_containers, camel_case_types, prefer_const_constructors, sized_box_for_whitespace, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../widgets024=034.dart';
+import '../widgets024To034.dart';
 import 'f024Controller.dart';
+import 'f024Model.dart';
 
 class F024 extends StatelessWidget {
   const F024({super.key});
@@ -45,7 +46,7 @@ class F024 extends StatelessWidget {
                   text_widget(
                     horizontalPadding: 0.0,
                     verticalPadding: 0.0,
-                    text: '${controller.date}',
+                    text: '${controller.now}',
                     size: 18.0,
                   ),
                 ],
@@ -192,30 +193,11 @@ class F024 extends StatelessWidget {
                   ],
                 ),
               ),
-              equipment_list_widget(
+              for(int i = 0 ; i < 6 ; i++) equipment_list_widget(
                 screenWidth: screenWidth,
-                textController: controller.equipmentList_1,
+                textController: controller.equipmentList[0+i],
               ),
-              equipment_list_widget(
-                screenWidth: screenWidth,
-                textController: controller.equipmentList_2,
-              ),
-              equipment_list_widget(
-                screenWidth: screenWidth,
-                textController: controller.equipmentList_3,
-              ),
-              equipment_list_widget(
-                screenWidth: screenWidth,
-                textController: controller.equipmentList_4,
-              ),
-              equipment_list_widget(
-                screenWidth: screenWidth,
-                textController: controller.equipmentList_5,
-              ),
-              equipment_list_widget(
-                screenWidth: screenWidth,
-                textController: controller.equipmentList_6,
-              ),
+             
               Padding(
                 padding: const EdgeInsets.only(left: 350),
                 child: Row(
@@ -292,6 +274,29 @@ class F024 extends StatelessWidget {
                     height: 100.0,
                   ),
                 ],
+              ),
+              Center(
+                child: Container(
+                  width: screenWidth/4,
+                  height: 50.0,
+                  margin: EdgeInsets.symmetric(vertical: 20.0),
+                  child: MaterialButton(
+                   
+                    color: Colors.teal.shade400,
+                child: Text('Save',style: TextStyle(fontSize: 18.0,color: Colors.white,fontWeight: FontWeight.bold),),
+                onPressed: () {
+                // Save data to GetX controllers
+                
+                 controller.sendtoapi(F024Model(
+                          text: controller.employeeName.text,
+                          value: controller.officeValue
+                          ));
+                
+                controller.update();
+                print(controller.employeeName);
+                },
+                ),
+                ),
               ),
               BottomPage(
                   pageNumber: '',

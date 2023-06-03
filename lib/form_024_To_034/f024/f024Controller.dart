@@ -3,6 +3,10 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
+
+import 'f024Model.dart';
+
 
 class F024Controller extends GetxController {
   bool officeValue = false;
@@ -14,24 +18,21 @@ class F024Controller extends GetxController {
   bool otherValue = false;
 
 
-
-
-
-
-    var date = DateTime.now();
-
+DateTime now = DateTime.now();
+  String dateMonth = DateFormat.j().format(DateTime.now());
     var employeeName = TextEditingController();
     var employeeSignature = TextEditingController();
     var cardNumber = TextEditingController();
     var cellularPhone = TextEditingController();
     var laptop = TextEditingController();
-    var equipmentList_1 = TextEditingController();
-    var equipmentList_2 = TextEditingController();
-    var equipmentList_3 = TextEditingController();
-    var equipmentList_4 = TextEditingController();
-    var equipmentList_5 = TextEditingController();
-    var equipmentList_6 = TextEditingController();
+   
     var other = TextEditingController();
+
+
+List<TextEditingController> equipmentList = List.generate(6, (_) => TextEditingController());
+
+ 
+  sendtoapi(F024Model model) {}
 
   
 }
