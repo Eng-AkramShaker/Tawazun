@@ -11,7 +11,7 @@ class C_TextField extends StatelessWidget {
 
   String? hint_Text = '';
 
-  dynamic TEXT_controller = TextEditingController();
+  TextEditingController TEXT_controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
