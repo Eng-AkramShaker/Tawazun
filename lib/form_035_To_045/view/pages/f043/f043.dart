@@ -2086,7 +2086,7 @@ class F043 extends StatelessWidget {
                                     ),
                                   ],
                                 )),
-                                myCell(child:  Column(
+                                 myCell(child:  Column(
                                   children: [
                                     Row(
                                       children: [
@@ -2110,6 +2110,7 @@ class F043 extends StatelessWidget {
                                     ),
                                   ],
                                 )),
+                                myCell(child:  SizedBox()),
 
                               ]
                           ),
