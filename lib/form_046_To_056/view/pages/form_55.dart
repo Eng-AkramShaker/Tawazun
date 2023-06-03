@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../constant/font_style.dart';
-import '../../../controller/form55_controller.dart';
-import '../../widget/date_custom_widget.dart';
-import '../../widget/text-textfiled_widget.dart';
-import '../../widget/title_.dart';
+import '../../constant/font_style.dart';
+import '../../controller/form55_controller.dart';
+import '../widget/date_custom_widget.dart';
+import '../widget/text-textfiled_widget.dart';
+import '../widget/title_.dart';
 
 class Form55 extends StatelessWidget {
   const Form55({Key? key}) : super(key: key);
