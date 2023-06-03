@@ -1,26 +1,25 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 
 class PaddingTitleText extends StatelessWidget {
+
   String title;
   Color color;
   TextAlign? textAlign;
-  PaddingTitleText(
-      {super.key, required this.title, required this.color, this.textAlign});
+  PaddingTitleText({required this.title,required this.color,this.textAlign});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return  Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Text(
         title,
+        maxLines: 1,
         style: TextStyle(
           color: color,
-          fontSize: 17,
+          fontSize: 15,
           fontWeight: FontWeight.bold,
         ),
-        textAlign: textAlign,
+        textAlign: textAlign ?? TextAlign.center,
       ),
     );
   }

@@ -1,5 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -680,8 +678,7 @@ class F038 extends StatelessWidget {
                     Expanded(
                         child: MyTitleText(
                             fontSize: 17,
-                            title: 'DEBRIDEMENT TYPE',
-                            color: Colors.black)),
+                            title: 'DEBRIDEMENT TYPE', color: Colors.black)),
                     Expanded(
                         child: MyTitleText(
                             fontSize: 17,
@@ -2872,25 +2869,24 @@ class F038 extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Expanded(child: SizedBox()),
+                   Expanded(child: SizedBox()),
                     Expanded(
                       child: Column(
                         children: [
                           MyTitleText(
                             fontSize: 17,
-                            title:
-                                'F038-THHC Wound Care Dressing Documentation',
+                            title: 'F038-THHC Wound Care Dressing Documentation',
                             color: Colors.black,
                           ),
                           MyTitleText(
                             fontSize: 17,
-                            title:
-                                'THHC-030 Wound Care Management at Home Health Care',
+                            title: 'THHC-030 Wound Care Management at Home Health Care',
                             color: Colors.black,
                           ),
                         ],
                       ),
                     ),
+
                   ],
                 ),
               ],

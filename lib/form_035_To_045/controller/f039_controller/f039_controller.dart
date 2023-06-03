@@ -1,9 +1,8 @@
-// ignore_for_file: non_constant_identifier_names
-
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-class F039Controller extends GetxController {
+class F039Controller extends GetxController{
+
   TextEditingController firstDeptController = TextEditingController();
   TextEditingController firstmonth_yearController = TextEditingController();
 
@@ -78,6 +77,7 @@ class F039Controller extends GetxController {
   TextEditingController firstSignController30 = TextEditingController();
   TextEditingController firstSignController31 = TextEditingController();
 
+
   TextEditingController firstDayController1 = TextEditingController();
   TextEditingController firstDayController2 = TextEditingController();
   TextEditingController firstDayController3 = TextEditingController();
@@ -109,6 +109,14 @@ class F039Controller extends GetxController {
   TextEditingController firstDayController29 = TextEditingController();
   TextEditingController firstDayController30 = TextEditingController();
   TextEditingController firstDayController31 = TextEditingController();
+
+
+
+
+
+
+
+
 
   // Todo:2th
   TextEditingController secondReadingController1 = TextEditingController();
@@ -142,6 +150,8 @@ class F039Controller extends GetxController {
   TextEditingController secondReadingController29 = TextEditingController();
   TextEditingController secondReadingController30 = TextEditingController();
   TextEditingController secondReadingController31 = TextEditingController();
+
+
 
   TextEditingController secondDayController1 = TextEditingController();
   TextEditingController secondDayController2 = TextEditingController();
@@ -240,6 +250,7 @@ class F039Controller extends GetxController {
   TextEditingController thirdReadingController30 = TextEditingController();
   TextEditingController thirdReadingController31 = TextEditingController();
 
+
   TextEditingController thirdSignController1 = TextEditingController();
   TextEditingController thirdSignController2 = TextEditingController();
   TextEditingController thirdSignController3 = TextEditingController();
@@ -271,4 +282,5 @@ class F039Controller extends GetxController {
   TextEditingController thirdSignController29 = TextEditingController();
   TextEditingController thirdSignController30 = TextEditingController();
   TextEditingController thirdSignController31 = TextEditingController();
+
 }

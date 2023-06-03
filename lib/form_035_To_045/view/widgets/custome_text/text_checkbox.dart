@@ -1,8 +1,7 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 
 class TextCheckbox extends StatelessWidget {
+
   String title;
   Color color;
   TextAlign? textAlign;
@@ -10,18 +9,12 @@ class TextCheckbox extends StatelessWidget {
   TextDirection? textDirection;
   FontWeight? fontWeight;
 
-  TextCheckbox(
-      {super.key,
-      required this.title,
-      required this.color,
-      this.textAlign,
-      this.fontSize,
-      this.textDirection,
-      this.fontWeight});
+  TextCheckbox({required this.title,required this.color,this.textAlign,this.fontSize,this.textDirection,this.fontWeight});
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return  Expanded(
+
       child: Text(
         title,
         textDirection: textDirection,
@@ -31,6 +24,8 @@ class TextCheckbox extends StatelessWidget {
           fontWeight: fontWeight,
         ),
         textAlign: textAlign,
+        maxLines: 1,
+          overflow: TextOverflow.ellipsis
       ),
     );
   }
