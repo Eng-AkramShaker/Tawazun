@@ -1,6 +1,6 @@
 // Table Other physicians  -------------------------------------------------------------
 
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, unused_local_variable
 
 import 'package:f011/form_011_To_023/F016/View/Widgets/textField.dart';
 import 'package:flutter/material.dart';

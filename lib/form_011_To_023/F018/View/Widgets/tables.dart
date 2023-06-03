@@ -1,6 +1,6 @@
 // Table ITEM   -------------------------------------------------------------
 
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, camel_case_types, avoid_unnecessary_containers
 
 import 'package:f011/form_011_To_023/F018/View/Widgets/textField.dart';
 import 'package:flutter/material.dart';

@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, prefer_const_constructors_in_immutables, non_constant_identifier_names, use_function_type_syntax_for_parameters
+// ignore_for_file: camel_case_types, prefer_const_constructors_in_immutables, non_constant_identifier_names, use_function_type_syntax_for_parameters, file_names
 
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';

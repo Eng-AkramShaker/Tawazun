@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable, camel_case_types, sized_box_for_whitespace, unused_local_variable
+// ignore_for_file: must_be_immutable, camel_case_types, sized_box_for_whitespace, unused_local_variable, non_constant_identifier_names, avoid_unnecessary_containers
 
 import 'package:f011/form_011_To_023/F019/f019Controller.dart';
 import 'package:flutter/material.dart';

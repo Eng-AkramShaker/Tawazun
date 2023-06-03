@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, prefer_const_constructors_in_immutables, non_constant_identifier_names
+// ignore_for_file: camel_case_types, prefer_const_constructors_in_immutables, non_constant_identifier_names, file_names
 
 import 'package:flutter/material.dart';
 
