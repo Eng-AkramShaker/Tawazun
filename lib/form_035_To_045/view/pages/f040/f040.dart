@@ -1,5 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors, must_be_immutable
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,6 +5,7 @@ import '../../../controller/f040_controller/f040_controller.dart';
 import '../../widgets/custom_textform_field/my_text_form_field.dart';
 import '../../widgets/custome_text/my_title_text.dart';
 import '../../widgets/custome_text/text_checkbox.dart';
+
 
 class F040 extends StatelessWidget {
   var f040Controller = Get.put(F040Controller());
@@ -28,8 +27,7 @@ class F040 extends StatelessWidget {
                   children: [
                     Expanded(
                       flex: 40,
-                      child: Image.asset(
-                        'assets/images/tawazun-logo.png',
+                      child: Image.asset('assets/images/tawazun-logo.png',
                         height: 70,
                       ),
                     ),
@@ -66,6 +64,7 @@ class F040 extends StatelessWidget {
                           controller: f040Controller.labelController1,
                           hintStyle: const TextStyle(
                             fontSize: 10,
+
                           ),
                         ),
                       ),
@@ -855,8 +854,7 @@ class F040 extends StatelessWidget {
                         f040Controller.update();
                       },
                     ),
-                    TextCheckbox(
-                        title: 'Yes', color: Colors.black, fontSize: 12),
+                    TextCheckbox(title: 'Yes', color: Colors.black, fontSize: 12),
                     Checkbox(
                       checkColor: Colors.white,
                       activeColor: Colors.red,
@@ -867,8 +865,7 @@ class F040 extends StatelessWidget {
                         f040Controller.update();
                       },
                     ),
-                    TextCheckbox(
-                        title: 'No', color: Colors.black, fontSize: 12),
+                    TextCheckbox(title: 'No', color: Colors.black, fontSize: 12),
                   ],
                 ),
                 MyTitleText(
@@ -965,10 +962,9 @@ class F040 extends StatelessWidget {
                     Expanded(
                       child: MyTextFormField(
                         controller: f040Controller.drugProductNameController,
-                        hintText:
-                            '__________________________________________________________',
-                        hintStyle:
-                            const TextStyle(overflow: TextOverflow.visible),
+                        hintText: '__________________________________________________________',
+                        hintStyle: const TextStyle(overflow: TextOverflow.visible),
+
                       ),
                     ),
                     SingleChildScrollView(
@@ -982,17 +978,17 @@ class F040 extends StatelessWidget {
                     Expanded(
                       child: MyTextFormField(
                         controller: f040Controller.drugStrengthController,
-                        hintText:
-                            '______________________________________________________',
-                        hintStyle:
-                            const TextStyle(overflow: TextOverflow.visible),
+                        hintText: '______________________________________________________',
+                        hintStyle: const TextStyle(overflow: TextOverflow.visible),
+
                       ),
                     ),
                   ],
                 ),
                 //Todo :Dosage Form:
                 MyTitleText(
-                  title: 'Dosage Form:',
+                  title:
+                  'Dosage Form:',
                   color: Colors.black,
                   fontSize: 15,
                 ),
@@ -1073,7 +1069,8 @@ class F040 extends StatelessWidget {
                 //Todo :Route of Administration:
                 const SizedBox(height: 10),
                 MyTitleText(
-                  title: 'Route of Administration:',
+                  title:
+                  'Route of Administration:',
                   color: Colors.black,
                   fontSize: 15,
                 ),
@@ -1087,7 +1084,9 @@ class F040 extends StatelessWidget {
                       },
                     ),
                     TextCheckbox(
-                        title: 'Oral', color: Colors.black, fontSize: 12),
+                        title: 'Oral',
+                        color: Colors.black,
+                        fontSize: 12),
                     Checkbox(
                       value: f040Controller.nose,
                       onChanged: (val) {
@@ -1158,8 +1157,7 @@ class F040 extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 MyTitleText(
-                  title:
-                      '(A)Circumstances/events with capacity to cause error.',
+                  title: '(A)Circumstances/events with capacity to cause error.',
                   color: Colors.black,
                   fontSize: 14,
                 ),
@@ -1179,32 +1177,27 @@ class F040 extends StatelessWidget {
                   fontSize: 14,
                 ),
                 MyTitleText(
-                  title:
-                      '(E)	Error reached the patient & resulted in temporary harm & required intervention.',
+                  title: '(E)	Error reached the patient & resulted in temporary harm & required intervention.',
                   color: Colors.black,
                   fontSize: 14,
                 ),
                 MyTitleText(
-                  title:
-                      '(F)Error reached the patient & resulted in temporary harm & initial or prolonged hospitalization.',
+                  title: '(F)Error reached the patient & resulted in temporary harm & initial or prolonged hospitalization.',
                   color: Colors.black,
                   fontSize: 14,
                 ),
                 MyTitleText(
-                  title:
-                      '(G)Error reached the patient & resulted in permanent patient harm.',
+                  title: '(G)Error reached the patient & resulted in permanent patient harm.',
                   color: Colors.black,
                   fontSize: 14,
                 ),
                 MyTitleText(
-                  title:
-                      '(H)Error reached the patient & required intervention necessary to sustain life.',
+                  title: '(H)Error reached the patient & required intervention necessary to sustain life.',
                   color: Colors.black,
                   fontSize: 14,
                 ),
                 MyTitleText(
-                  title:
-                      '(I)Error reached the patient & contributed to patient’s death (N.B: immediately notify the Sentinel Event',
+                  title: '(I)Error reached the patient & contributed to patient’s death (N.B: immediately notify the Sentinel Event',
                   color: Colors.black,
                   fontSize: 14,
                 ),
@@ -1223,8 +1216,7 @@ class F040 extends StatelessWidget {
                   children: [
                     Expanded(
                       flex: 40,
-                      child: Image.asset(
-                        'assets/images/tawazun-logo.png',
+                      child: Image.asset('assets/images/tawazun-logo.png',
                         height: 70,
                       ),
                     ),
@@ -1261,6 +1253,7 @@ class F040 extends StatelessWidget {
                           controller: f040Controller.labelController2,
                           hintStyle: const TextStyle(
                             fontSize: 10,
+
                           ),
                         ),
                       ),
@@ -1271,14 +1264,14 @@ class F040 extends StatelessWidget {
                 //Todo:Intervention
                 MyTitleText(
                   title:
-                      'Intervention: [e.g., administer antidote, change to correct drug/dose, appropriate frequency was instituted, etc.]',
+                  'Intervention: [e.g., administer antidote, change to correct drug/dose, appropriate frequency was instituted, etc.]',
                   color: Colors.black,
                   fontSize: 15,
                 ),
                 MyTextFormField(
                   controller: f040Controller.interventionController,
                   hintText:
-                      '____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________'
+                  '____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________'
                       '____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________'
                       '____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________'
                       '____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________'
@@ -1292,45 +1285,39 @@ class F040 extends StatelessWidget {
                 ),
 
                 Row(
-                  children: [
-                    MyTitleText(
-                      title: 'Signed by THHC Manager/Supervisor:',
-                      color: Colors.black,
-                      fontSize: 15,
-                    ),
-                    Expanded(
-                      child: MyTextFormField(
-                        controller: f040Controller.signedManagerController,
-                        hintText: '_________________',
-                        hintMaxLine: 1,
-                        hintStyle:
-                            const TextStyle(overflow: TextOverflow.visible),
-                      ),
-                    ),
-                  ],
-                ),
+             children: [
+               MyTitleText(
+                 title:
+                 'Signed by THHC Manager/Supervisor:',
+                 color: Colors.black,
+                 fontSize: 15,
+               ),
+              Expanded(child:  MyTextFormField(
+                controller: f040Controller.signedManagerController,
+                hintText:
+                '_________________',
+                hintMaxLine: 1,
+                hintStyle: const TextStyle(overflow: TextOverflow.visible),
+              ),),
+             ],
+           ),
 
                 const SizedBox(height: 90),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    MyTitleText(
-                        title:
-                            'THHC-028 Medication Administration and an Independent double check procedure for high alert medication and Telephone Orders received',
+                    MyTitleText(title: 'THHC-028 Medication Administration and an Independent double check procedure for high alert medication and Telephone Orders received',
                         color: Colors.black,
                         fontSize: 9),
-                    MyTitleText(
-                        title:
-                            'THHC-033 PROCESS FOR REPORTING AND ACTING ON MEDICATION ERRORS AND NEAR MISSES',
+                    MyTitleText(title:'THHC-033 PROCESS FOR REPORTING AND ACTING ON MEDICATION ERRORS AND NEAR MISSES',
                         color: Colors.black,
                         fontSize: 9),
                   ],
                 ),
                 const SizedBox(height: 50),
-                MyTitleText(
-                  title: 'F040-THHC MEDICATION ERROR REPORTING FORM ',
-                  color: Colors.grey,
-                  fontSize: 9,
+                MyTitleText(title: 'F040-THHC MEDICATION ERROR REPORTING FORM ',
+                    color: Colors.grey,
+                    fontSize: 9,
                   textAlign: TextAlign.end,
                 ),
               ],

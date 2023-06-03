@@ -1,11 +1,10 @@
-// ignore_for_file: non_constant_identifier_names
-
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-class F041Controller extends GetxController {
+class F041Controller extends GetxController{
   DateTime now = DateTime.now();
   TextEditingController topController1 = TextEditingController();
+
 
   TextEditingController text_Controller1 = TextEditingController();
   TextEditingController text_Controller2 = TextEditingController();
@@ -34,4 +33,6 @@ class F041Controller extends GetxController {
   TextEditingController text_Controller25 = TextEditingController();
   TextEditingController text_Controller26 = TextEditingController();
   TextEditingController text_Controller27 = TextEditingController();
+
+
 }

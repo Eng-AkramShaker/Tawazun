@@ -1,5 +1,3 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 
 class MyTextFormField extends StatelessWidget {
@@ -14,17 +12,17 @@ class MyTextFormField extends StatelessWidget {
   TextDirection? textDirection;
   TextAlign? textAlign;
 
-  MyTextFormField(
-      {super.key,
-      required this.controller,
-      this.hintText,
-      this.hintStyle,
-      this.suffixIcon,
-      this.textInputType,
-      this.hintMaxLine,
-      this.textDirection,
-      this.inputFormatters,
-      this.textAlign});
+  MyTextFormField({
+    required this.controller,
+    this.hintText,
+    this.hintStyle,
+    this.suffixIcon,
+    this.textInputType,
+    this.hintMaxLine,
+    this.textDirection,
+    this.inputFormatters,
+    this.textAlign
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,15 +31,18 @@ class MyTextFormField extends StatelessWidget {
       textDirection: textDirection,
       inputFormatters: inputFormatters,
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.symmetric(vertical: 10),
+        contentPadding: EdgeInsets.symmetric(vertical: 10),
         isDense: true,
         border: InputBorder.none,
         hintMaxLines: hintMaxLine,
         hintText: hintText,
-        hintStyle: hintStyle,
+        hintStyle: hintStyle ?? TextStyle(
+          overflow: TextOverflow.visible
+        ),
         suffixIcon: suffixIcon,
       ),
       textAlign: textAlign ?? TextAlign.start,
+
     );
   }
 }

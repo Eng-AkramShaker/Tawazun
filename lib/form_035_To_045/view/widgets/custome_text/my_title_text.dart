@@ -1,5 +1,3 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 
 class MyTitleText extends StatelessWidget {
@@ -10,14 +8,14 @@ class MyTitleText extends StatelessWidget {
   TextDirection? textDirection;
   FontWeight? fontWeight;
 
-  MyTitleText(
-      {super.key,
-      required this.title,
-      required this.color,
-      this.textAlign,
-      this.fontSize,
-      this.textDirection,
-      this.fontWeight});
+  MyTitleText({
+    required this.title,
+    required this.color,
+    this.textAlign,
+    this.fontSize,
+    this.textDirection,
+    this.fontWeight
+  });
 
   @override
   Widget build(BuildContext context) {

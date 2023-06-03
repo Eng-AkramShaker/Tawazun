@@ -1,5 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
-
 import 'package:f011/form_035_To_045/controller/f035_controller/f035_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,14 +6,15 @@ import '../../widgets/custome_text/my_color_title.dart';
 import '../../widgets/custom_textform_field/my_text_form_field.dart';
 
 class F035 extends StatelessWidget {
+
   var controller = Get.put(F035Controller());
   @override
   Widget build(BuildContext context) {
     var x = MediaQuery.of(context).size.width;
     return GetBuilder<F035Controller>(
-      builder: (controller) => Scaffold(
+      builder: (controller)=> Scaffold(
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 20),
           child: SingleChildScrollView(
             child: Center(
               child: Column(
@@ -25,8 +24,7 @@ class F035 extends StatelessWidget {
                     children: [
                       Expanded(
                         flex: 30,
-                        child: Image.asset(
-                          'assets/images/tawazun-logo.png',
+                        child: Image.asset('assets/images/tawazun-logo.png',
                           height: 70,
                         ),
                       ),
@@ -51,6 +49,7 @@ class F035 extends StatelessWidget {
                             hintText: 'place Patient Label',
                             hintStyle: TextStyle(
                               fontSize: 10,
+
                             ),
                           ),
                         ),
@@ -74,8 +73,7 @@ class F035 extends StatelessWidget {
                         TableRow(
                           children: [
                             TableCell(
-                              verticalAlignment:
-                                  TableCellVerticalAlignment.fill,
+                              verticalAlignment: TableCellVerticalAlignment.fill,
                               child: Container(
                                 color: Colors.teal.shade400,
                                 child: Column(
@@ -104,8 +102,7 @@ class F035 extends StatelessWidget {
                                     ),
                                   ),
                                   MyColorTitle(
-                                      title: 'Date:',
-                                      textAlign: TextAlign.start),
+                                      title: 'Date:', textAlign: TextAlign.start),
                                 ],
                               ),
                             ),
@@ -124,8 +121,7 @@ class F035 extends StatelessWidget {
                                     ),
                                   ),
                                   MyColorTitle(
-                                      title: 'Date:',
-                                      textAlign: TextAlign.start),
+                                      title: 'Date:', textAlign: TextAlign.start),
                                 ],
                               ),
                             ),
@@ -144,8 +140,7 @@ class F035 extends StatelessWidget {
                                     ),
                                   ),
                                   MyColorTitle(
-                                      title: 'Date:',
-                                      textAlign: TextAlign.start),
+                                      title: 'Date:', textAlign: TextAlign.start),
                                 ],
                               ),
                             ),
@@ -164,8 +159,7 @@ class F035 extends StatelessWidget {
                                     ),
                                   ),
                                   MyColorTitle(
-                                      title: 'Date:',
-                                      textAlign: TextAlign.start),
+                                      title: 'Date:', textAlign: TextAlign.start),
                                 ],
                               ),
                             ),
@@ -186,7 +180,7 @@ class F035 extends StatelessWidget {
                       5: FlexColumnWidth(x * 4),
                     },
                     border: TableBorder.all(),
-                    children: [
+                    children:  [
                       //TODO: Eating
                       TableRow(
                         children: [
@@ -198,23 +192,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.eatingAdmissionController),
+                                controller: controller.eatingAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.eatingReAssessmentController1),
+                                controller: controller.eatingReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.eatingReAssessmentController2),
+                                controller: controller.eatingReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.eatingReAssessmentController3),
+                                controller: controller.eatingReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -229,23 +223,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bathingAdmissionController),
+                                controller: controller.bathingAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bathingReAssessmentController1),
+                                controller: controller.bathingReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bathingReAssessmentController2),
+                                controller: controller.bathingReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bathingReAssessmentController3),
+                                controller: controller.bathingReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -260,23 +254,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.groomingAdmissionController),
+                                controller: controller.groomingAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.groomingReAssessmentController1),
+                                controller: controller.groomingReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.groomingReAssessmentController2),
+                                controller: controller.groomingReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.groomingReAssessmentController3),
+                                controller: controller.groomingReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -291,23 +285,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.upperAdmissionController),
+                                controller: controller.upperAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.upperReAssessmentController1),
+                                controller: controller.upperReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.upperReAssessmentController2),
+                                controller: controller.upperReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.upperReAssessmentController3),
+                                controller: controller.upperReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -322,23 +316,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.lowerAdmissionController),
+                                controller: controller.lowerAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.lowerReAssessmentController1),
+                                controller: controller.lowerReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.lowerReAssessmentController2),
+                                controller: controller.lowerReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.lowerReAssessmentController3),
+                                controller: controller.lowerReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -353,23 +347,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.toiletingAdmissionController),
+                                controller: controller.toiletingAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller: controller
-                                    .toiletingReAssessmentController1),
+                                controller: controller.toiletingReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller: controller
-                                    .toiletingReAssessmentController2),
+                                controller: controller.toiletingReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller: controller
-                                    .toiletingReAssessmentController3),
+                                controller: controller.toiletingReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -377,7 +371,10 @@ class F035 extends StatelessWidget {
                   ),
 
                   //TODO: Sphincter table
-                  TitleContainer(title: 'Sphincter Control', context: context),
+                  TitleContainer(
+                    title: 'Sphincter Control',
+                    context: context
+                  ),
 
                   //TODO: second table
                   Table(
@@ -390,7 +387,7 @@ class F035 extends StatelessWidget {
                       5: FlexColumnWidth(x * 4),
                     },
                     border: TableBorder.all(),
-                    children: [
+                    children:  [
                       //TODO: Bladder
                       TableRow(
                         children: [
@@ -402,23 +399,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bladderAdmissionController),
+                                controller: controller.bladderAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bladderReAssessmentController1),
+                                controller: controller.bladderReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bladderReAssessmentController2),
+                                controller: controller.bladderReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bladderReAssessmentController3),
+                                controller: controller.bladderReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -433,23 +430,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bowelAdmissionController),
+                                controller: controller.bowelAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bowelReAssessmentController1),
+                                controller: controller.bowelReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bowelReAssessmentController2),
+                                controller: controller.bowelReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bowelReAssessmentController3),
+                                controller: controller.bowelReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -457,7 +454,10 @@ class F035 extends StatelessWidget {
                   ),
 
                   //TODO: Transfers table
-                  TitleContainer(title: 'Transfers', context: context),
+                  TitleContainer(
+                      title: 'Transfers',
+                      context: context
+                  ),
 
                   //TODO: third table
                   Table(
@@ -470,7 +470,7 @@ class F035 extends StatelessWidget {
                       5: FlexColumnWidth(x * 4),
                     },
                     border: TableBorder.all(),
-                    children: [
+                    children:  [
                       //TODO: Bed
                       TableRow(
                         children: [
@@ -482,22 +482,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller: controller.bedAdmissionController),
+                                controller: controller.bedAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bedReAssessmentController1),
+                                controller: controller.bedReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bedReAssessmentController2),
+                                controller: controller.bedReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.bedReAssessmentController3),
+                                controller: controller.bedReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -512,23 +513,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.toiletAdmissionController),
+                                controller: controller.toiletAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.toiletReAssessmentController1),
+                                controller: controller.toiletReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.toiletReAssessmentController2),
+                                controller: controller.toiletReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.toiletReAssessmentController3),
+                                controller: controller.toiletReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -544,22 +545,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller: controller.tubAdmissionController),
+                                controller: controller.tubAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.tubReAssessmentController1),
+                                controller: controller.tubReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.tubReAssessmentController2),
+                                controller: controller.tubReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.tubReAssessmentController3),
+                                controller: controller.tubReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -567,7 +569,10 @@ class F035 extends StatelessWidget {
                   ),
 
                   //TODO: Transfers table
-                  TitleContainer(title: 'Locomotion', context: context),
+                  TitleContainer(
+                      title: 'Locomotion',
+                      context: context
+                  ),
 
                   //TODO: forth table
                   Table(
@@ -580,7 +585,7 @@ class F035 extends StatelessWidget {
                       5: FlexColumnWidth(x * 4),
                     },
                     border: TableBorder.all(),
-                    children: [
+                    children:  [
                       //TODO: Walk
                       TableRow(
                         children: [
@@ -588,27 +593,27 @@ class F035 extends StatelessWidget {
                             child: numberText(title: '12.'),
                           ),
                           TableCell(
-                            child: SelfText(
-                                title: 'Locomotion: Walk or Wheelchair'),
+                            child: SelfText(title: 'Locomotion: Walk or Wheelchair'),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller: controller.walkAdmissionController),
+                                controller: controller.walkAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.walkReAssessmentController1),
+                                controller: controller.walkReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.walkReAssessmentController2),
+                                controller: controller.walkReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.walkReAssessmentController3),
+                                controller: controller.walkReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -624,31 +629,36 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.stairsAdmissionController),
+                                controller: controller.stairsAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.stairsReAssessmentController1),
+                                controller: controller.stairsReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.stairsReAssessmentController2),
+                                controller: controller.stairsReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.stairsReAssessmentController3),
+                                controller: controller.stairsReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
+
+
                     ],
                   ),
 
                   //TODO: Transfers table
-                  TitleContainer(title: 'Communication', context: context),
+                  TitleContainer(
+                      title: 'Communication',
+                      context: context
+                  ),
                   //TODO: fifth table
                   Table(
                     columnWidths: {
@@ -660,7 +670,7 @@ class F035 extends StatelessWidget {
                       5: FlexColumnWidth(x * 4),
                     },
                     border: TableBorder.all(),
-                    children: [
+                    children:  [
                       //TODO: Comprehension
                       TableRow(
                         children: [
@@ -672,23 +682,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller: controller
-                                    .comprehensionAdmissionController),
+                                controller: controller.comprehensionAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller: controller
-                                    .comprehensionReAssessmentController1),
+                                controller: controller.comprehensionReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller: controller
-                                    .comprehensionReAssessmentController2),
+                                controller: controller.comprehensionReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller: controller
-                                    .comprehensionReAssessmentController3),
+                                controller: controller.comprehensionReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -704,31 +714,37 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.expressionAdmissionController),
+                                controller: controller.expressionAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller: controller
-                                    .expressionReAssessmentController1),
+                                controller: controller.expressionReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller: controller
-                                    .expressionReAssessmentController2),
+                                controller: controller.expressionReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller: controller
-                                    .expressionReAssessmentController3),
+                                controller: controller.expressionReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
+
+
                     ],
                   ),
 
+
                   //TODO: Transfers table
-                  TitleContainer(title: 'Social Cognition', context: context),
+                  TitleContainer(
+                      title: 'Social Cognition',
+                      context: context
+                  ),
                   //TODO: sixth table
                   Table(
                     columnWidths: {
@@ -740,7 +756,7 @@ class F035 extends StatelessWidget {
                       5: FlexColumnWidth(x * 4),
                     },
                     border: TableBorder.all(),
-                    children: [
+                    children:  [
                       //TODO: Social Interaction
                       TableRow(
                         children: [
@@ -752,23 +768,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.socialAdmissionController),
+                                controller: controller.socialAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.socialReAssessmentController1),
+                                controller: controller.socialReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.socialReAssessmentController2),
+                                controller: controller.socialReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.socialReAssessmentController3),
+                                controller: controller.socialReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -784,23 +800,23 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.solvingAdmissionController),
+                                controller: controller.solvingAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.solvingReAssessmentController1),
+                                controller: controller.solvingReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.solvingReAssessmentController2),
+                                controller: controller.solvingReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.solvingReAssessmentController3),
+                                controller: controller.solvingReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
@@ -816,26 +832,28 @@ class F035 extends StatelessWidget {
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.memoryAdmissionController),
+                                controller: controller.memoryAdmissionController
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.memoryReAssessmentController1),
+                                controller: controller.memoryReAssessmentController1
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.memoryReAssessmentController2),
+                                controller: controller.memoryReAssessmentController2
+                            ),
                           ),
                           TableCell(
                             child: MyTextFormField(
-                                controller:
-                                    controller.memoryReAssessmentController3),
+                                controller: controller.memoryReAssessmentController3
+                            ),
                           ),
                         ],
                       ),
+
+
                     ],
                   ),
 
@@ -851,51 +869,46 @@ class F035 extends StatelessWidget {
                         4: FlexColumnWidth(x * 0.5),
                       },
                       border: TableBorder.all(),
-                      children: [
+                      children:  [
                         TableRow(
                           children: [
                             const TableCell(
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 8.0, vertical: 8.0),
-                                child: Text(
-                                  'TOTAL SCORE:',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  textAlign: TextAlign.right,
+                              child:Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 8.0,vertical: 8.0),
+                                child: Text('TOTAL SCORE:',style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                textAlign: TextAlign.right,
                                 ),
                               ),
                             ),
                             TableCell(
                               child: MyTextFormField(
-                                  controller:
-                                      controller.scoreAdmissionController),
+                                  controller: controller.scoreAdmissionController
+                              ),
                             ),
-                            TableCell(
-                              child: MyTextFormField(
-                                  controller:
-                                      controller.scoreAdmissionController),
+                           TableCell(
+                            child: MyTextFormField(
+                                controller: controller.scoreAdmissionController
                             ),
-                            TableCell(
-                              child: MyTextFormField(
-                                  controller:
-                                      controller.scoreAdmissionController),
+                          ),
+                           TableCell(
+                            child: MyTextFormField(
+                                controller: controller.scoreAdmissionController
                             ),
-                            TableCell(
-                              child: MyTextFormField(
-                                  controller:
-                                      controller.scoreAdmissionController),
+                          ),
+                           TableCell(
+                            child: MyTextFormField(
+                                controller: controller.scoreAdmissionController
                             ),
+                          ),
                           ],
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20,),
                   //TODO: new table
 
                   //TODO: Scale table
@@ -907,15 +920,12 @@ class F035 extends StatelessWidget {
                         TableRow(
                           children: [
                             TableCell(
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 8.0, vertical: 5),
-                                child: Text(
-                                  'Scale:',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18),
-                                ),
+                              child:Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 8.0,vertical: 5),
+                                child: Text('Scale:',style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18
+                                ),),
                               ),
                             ),
                           ],
@@ -926,113 +936,113 @@ class F035 extends StatelessWidget {
                   //TODO: Score table
 
                   Row(
-                    children: [
-                      Expanded(
-                        flex: 80,
-                        child: Table(
-                          columnWidths: {
-                            0: FlexColumnWidth(x * 3),
-                            1: FlexColumnWidth(x * 30),
-                          },
-                          border: TableBorder.all(),
-                          children: [
-                            TableRow(
-                              children: [
-                                TableCell(
-                                  child: Container(
-                                    color: Colors.lightGreen.shade100,
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0, vertical: 5),
-                                    child: const Text(
-                                      'Score',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                TableCell(
-                                  verticalAlignment:
-                                      TableCellVerticalAlignment.fill,
-                                  child: Container(
-                                    color: Colors.lightGreen.shade100,
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0, vertical: 5),
-                                    child: const Text(
-                                      'Independent',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            TableRow(
-                              children: [
-                                TableCell(
-                                  child: numberText(title: '7'),
-                                ),
-                                TableCell(
-                                  child: SelfText(
-                                      title:
-                                          'Complete Independence (Timely, Safely)'),
-                                ),
-                              ],
-                            ),
-                            TableRow(
-                              children: [
-                                TableCell(
-                                  child: numberText(title: '6'),
-                                ),
-                                TableCell(
-                                  child: SelfText(
-                                      title: 'Modified Independence (Device)'),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(flex: 20, child: SelfText(title: 'No Helper')),
-                    ],
-                  ),
-                  Table(
+                   children: [
+                   Expanded(
+                     flex: 80,
+                       child:    Table(
+                         columnWidths: {
+                           0: FlexColumnWidth(x * 3),
+                           1: FlexColumnWidth(x * 30),
+                         },
+                         border: TableBorder.all(),
+                         children:  [
+                           TableRow(
+                             children: [
+                               TableCell(
+                                 child: Container(
+                                   color: Colors.lightGreen.shade100,
+                                   padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
+                                   child: const Text(
+                                     'Score',
+                                     maxLines: 1,
+                                     overflow: TextOverflow.ellipsis,
+                                     style: TextStyle(
+                                       fontWeight: FontWeight.bold,
+                                       fontSize: 18,
+                                     ),
+                                   ),
+                                 ),
+                               ),
+                               TableCell(
+                                 verticalAlignment: TableCellVerticalAlignment.fill,
+                                 child: Container(
+                                   color: Colors.lightGreen.shade100,
+                                   padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
+                                   child: const Text(
+                                     'Independent',
+                                     maxLines: 1,
+                                     overflow: TextOverflow.ellipsis,
+                                     style: TextStyle(
+                                       fontWeight: FontWeight.bold,
+                                       fontSize: 18,
+                                     ),
+                                   ),
+                                 ),
+                               ),
+                             ],
+                           ),
+                           TableRow(
+                             children: [
+                               TableCell(
+                                 child: numberText(title: '7'),
+                               ),
+                               TableCell(
+                                 child: SelfText(title: 'Complete Independence (Timely, Safely)'),
+                               ),
+
+                             ],
+                           ),
+                           TableRow(
+                             children: [
+                               TableCell(
+                                 child: numberText(title: '6'),
+                               ),
+                               TableCell(
+                                 child: SelfText(title: 'Modified Independence (Device)'),
+                               ),
+
+                             ],
+                           ),
+
+
+                         ],
+                       ),),
+                     Expanded(
+                     flex: 20,
+                       child: SelfText(title: 'No Helper')),
+
+                 ],),
+                   Table(
                     border: TableBorder.all(),
-                    children: const [
+                    children:  const [
                       TableRow(
                         children: [
                           TableCell(
-                            child: SizedBox(),
+                         child: SizedBox(),
                           ),
+
                         ],
                       ),
+
                     ],
                   ),
                   Row(
                     children: [
                       Expanded(
                         flex: 80,
-                        child: Table(
+                        child:    Table(
                           columnWidths: {
                             0: FlexColumnWidth(x * 3),
                             1: FlexColumnWidth(x * 30),
                           },
                           border: TableBorder.all(),
-                          children: [
+                          children:  [
                             TableRow(
                               children: [
                                 TableCell(
                                   child: Container(
                                     color: Colors.lightGreen.shade100,
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0, vertical: 5),
+                                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
                                     child: const Text(
                                       '',
                                       maxLines: 1,
@@ -1045,12 +1055,10 @@ class F035 extends StatelessWidget {
                                   ),
                                 ),
                                 TableCell(
-                                  verticalAlignment:
-                                      TableCellVerticalAlignment.fill,
+                                  verticalAlignment: TableCellVerticalAlignment.fill,
                                   child: Container(
                                     color: Colors.lightGreen.shade100,
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0, vertical: 5),
+                                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
                                     child: const Text(
                                       'Modified Dependence',
                                       maxLines: 1,
@@ -1070,9 +1078,9 @@ class F035 extends StatelessWidget {
                                   child: numberText(title: '5'),
                                 ),
                                 TableCell(
-                                  child: SelfText(
-                                      title: 'Supervision (Subject = 100%+)'),
+                                  child: SelfText(title: 'Supervision (Subject = 100%+)'),
                                 ),
+
                               ],
                             ),
                             TableRow(
@@ -1081,9 +1089,9 @@ class F035 extends StatelessWidget {
                                   child: numberText(title: '4'),
                                 ),
                                 TableCell(
-                                  child: SelfText(
-                                      title: 'Minimal Assist (Subject = 75%+)'),
+                                  child: SelfText(title: 'Minimal Assist (Subject = 75%+)'),
                                 ),
+
                               ],
                             ),
                             TableRow(
@@ -1092,10 +1100,9 @@ class F035 extends StatelessWidget {
                                   child: numberText(title: '3'),
                                 ),
                                 TableCell(
-                                  child: SelfText(
-                                      title:
-                                          'Moderate Assist (Subject = 50%+)'),
+                                  child: SelfText(title: 'Moderate Assist (Subject = 50%+)'),
                                 ),
+
                               ],
                             ),
                             TableRow(
@@ -1103,8 +1110,7 @@ class F035 extends StatelessWidget {
                                 TableCell(
                                   child: Container(
                                     color: Colors.lightGreen.shade100,
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0, vertical: 5),
+                                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
                                     child: const Text(
                                       '',
                                       maxLines: 1,
@@ -1117,12 +1123,10 @@ class F035 extends StatelessWidget {
                                   ),
                                 ),
                                 TableCell(
-                                  verticalAlignment:
-                                      TableCellVerticalAlignment.fill,
+                                  verticalAlignment: TableCellVerticalAlignment.fill,
                                   child: Container(
                                     color: Colors.lightGreen.shade100,
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0, vertical: 5),
+                                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
                                     child: const Text(
                                       'Complete Dependence',
                                       maxLines: 1,
@@ -1136,15 +1140,16 @@ class F035 extends StatelessWidget {
                                 ),
                               ],
                             ),
+
                             TableRow(
                               children: [
                                 TableCell(
                                   child: numberText(title: '2'),
                                 ),
                                 TableCell(
-                                  child: SelfText(
-                                      title: 'Maximal Assist (Subject = 25%+)'),
+                                  child: SelfText(title: 'Maximal Assist (Subject = 25%+)'),
                                 ),
+
                               ],
                             ),
                             TableRow(
@@ -1153,21 +1158,22 @@ class F035 extends StatelessWidget {
                                   child: numberText(title: '1'),
                                 ),
                                 TableCell(
-                                  child: SelfText(
-                                      title:
-                                          'Total Assist (Subject = less than 25%)'),
+                                  child: SelfText(title: 'Total Assist (Subject = less than 25%)'),
                                 ),
+
                               ],
                             ),
+
                           ],
-                        ),
-                      ),
-                      Expanded(flex: 20, child: SelfText(title: 'Helper')),
-                    ],
-                  ),
+                        ),),
+                      Expanded(
+                          flex: 20,
+                          child: SelfText(title: 'Helper')),
+                    ],),
                   Table(
+
                     border: TableBorder.all(),
-                    children: const [
+                    children:  const [
                       TableRow(
                         children: [
                           TableCell(
@@ -1184,8 +1190,12 @@ class F035 extends StatelessWidget {
                               ),
                             ),
                           ),
+
                         ],
                       ),
+
+
+
                     ],
                   ),
                   //TODO: Signature  table
@@ -1224,19 +1234,21 @@ class F035 extends StatelessWidget {
                       ),
                     ),
                   )
+
                 ],
               ),
             ),
           ),
         ),
       ),
+
     );
   }
 
-  Widget TitleContainer(
-      {required String title, required BuildContext context}) {
+
+  Widget TitleContainer({required String title,required BuildContext context}){
     double x = MediaQuery.of(context).size.height;
-    return Container(
+    return  Container(
       color: Colors.teal.shade400,
       child: Table(
         columnWidths: {
@@ -1251,19 +1263,19 @@ class F035 extends StatelessWidget {
           TableRow(
             children: [
               TableCell(
-                child: singleText(text: title),
+                child:singleText(text: title),
               ),
               const TableCell(
-                child: SizedBox(),
+                child:SizedBox(),
               ),
               const TableCell(
-                child: SizedBox(),
+                child:SizedBox(),
               ),
               const TableCell(
-                child: SizedBox(),
+                child:SizedBox(),
               ),
               const TableCell(
-                child: SizedBox(),
+                child:SizedBox(),
               ),
             ],
           ),
@@ -1272,18 +1284,21 @@ class F035 extends StatelessWidget {
     );
   }
 
-  Widget singleText({required String text}) {
+
+  Widget singleText({required String text}){
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 8),
-      child: MyColorTitle(title: text, textAlign: TextAlign.center),
+      child:  MyColorTitle(
+          title: text,
+          textAlign: TextAlign.center),
     );
   }
 
-  Widget SelfText({
-    required String title,
-  }) {
+
+
+  Widget SelfText({required String title,}) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 8.0),
       child: Text(
         title,
         maxLines: 1,
@@ -1297,11 +1312,9 @@ class F035 extends StatelessWidget {
     );
   }
 
-  Widget numberText({
-    required String title,
-  }) {
+  Widget numberText({required String title,}) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 8.0),
       child: Text(
         title,
         maxLines: 1,
@@ -1314,4 +1327,6 @@ class F035 extends StatelessWidget {
       ),
     );
   }
+
+
 }
