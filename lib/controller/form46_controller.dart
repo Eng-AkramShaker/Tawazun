@@ -1,6 +1,3 @@
-import 'dart:ffi';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../modeles/form1_model.dart';
@@ -31,16 +28,15 @@ class Form1Controller extends GetxController {
   var strengthening = TextEditingController();
   var gaitTraining = TextEditingController();
   var posturalTraining = TextEditingController();
-  var homeInstruction  = TextEditingController();
-  var phOther  = TextEditingController();
-  var incidentsOrLockOfThereOf  = TextEditingController();
-  var statusofProgress  = TextEditingController();
-  var dischargePlan  = TextEditingController();
-  var planForNextVisit   = TextEditingController();
-  var physicalTherepyName   = TextEditingController();
-  var badge   = TextEditingController();
-  var sinature   = TextEditingController();
-
+  var homeInstruction = TextEditingController();
+  var phOther = TextEditingController();
+  var incidentsOrLockOfThereOf = TextEditingController();
+  var statusofProgress = TextEditingController();
+  var dischargePlan = TextEditingController();
+  var planForNextVisit = TextEditingController();
+  var physicalTherepyName = TextEditingController();
+  var badge = TextEditingController();
+  var sinature = TextEditingController();
 
 /////////////////////////checkBox////////////////////////
 
@@ -58,18 +54,58 @@ class Form1Controller extends GetxController {
 
   void updateCheckboxRoutine(bool value) {
     Routine = value;
-    update();}
-  void updateCheckboxUnSecdule(bool value) {UnSecdule = value;update();}
-  void updateCheckboxOther(bool value) {Other = value;update();}
-  void updateCheckboxOthertreatmentPlan(bool value) {treatmentPlan = value;update();}
-  void updateCheckboxContaine(bool value) {containe = value;update();}
-  void updateCheckboxPhysician(bool value) {physician = value;update();}
-  void updateCheckboxNureses(bool value) {nureses = value;update();}
-  void updateCheckboxRT(bool value) {RT = value;update();}
-  void updateCheckboxOT(bool value) {OT = value;update();}
-  void updateCheckboxSW(bool value) {SW = value;update();}
-  void updateCheckboxDietition(bool value) {dietition = value;update();}
+    update();
+  }
 
+  void updateCheckboxUnSecdule(bool value) {
+    UnSecdule = value;
+    update();
+  }
+
+  void updateCheckboxOther(bool value) {
+    Other = value;
+    update();
+  }
+
+  void updateCheckboxOthertreatmentPlan(bool value) {
+    treatmentPlan = value;
+    update();
+  }
+
+  void updateCheckboxContaine(bool value) {
+    containe = value;
+    update();
+  }
+
+  void updateCheckboxPhysician(bool value) {
+    physician = value;
+    update();
+  }
+
+  void updateCheckboxNureses(bool value) {
+    nureses = value;
+    update();
+  }
+
+  void updateCheckboxRT(bool value) {
+    RT = value;
+    update();
+  }
+
+  void updateCheckboxOT(bool value) {
+    OT = value;
+    update();
+  }
+
+  void updateCheckboxSW(bool value) {
+    SW = value;
+    update();
+  }
+
+  void updateCheckboxDietition(bool value) {
+    dietition = value;
+    update();
+  }
 
   sendtoapi(form1Model model) {}
 
@@ -94,7 +130,5 @@ class Form1Controller extends GetxController {
     update();
   }
 
-
 /////////////////////////SignatureController////////////////////////
-
 }

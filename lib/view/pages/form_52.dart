@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../constant/font_style.dart';
-import '../../controller/page52_controller.dart';
+import '../../controller/form52_controller.dart';
 import '../widget/table_title_widget.dart';
 import '../widget/text-textfiled_widget.dart';
 
-class Page52 extends StatelessWidget {
-  const Page52({
+class Form52 extends StatelessWidget {
+  const Form52({
     Key? key,
   }) : super(key: key);
   @override

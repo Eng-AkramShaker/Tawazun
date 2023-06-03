@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../constant/font_style.dart';
-import '../../../controller/form53_controller.dart';
-import '../../widget/table_title_widget.dart';
-import '../../widget/text_widget.dart';
+import '../../constant/font_style.dart';
+import '../../controller/form53_controller.dart';
+import '../widget/table_title_widget.dart';
+import '../widget/text_widget.dart';
 
 class Form53 extends StatelessWidget {
   const Form53({Key? key}) : super(key: key);

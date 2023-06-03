@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../constant/font_style.dart';
-import '../../controller/controller_form50.dart';
+import '../../controller/form50_controller.dart';
 import '../widget/table_title_widget.dart';
 
 class Form50 extends StatelessWidget {

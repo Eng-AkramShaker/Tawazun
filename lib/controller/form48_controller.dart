@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-class FormTowController extends GetxController{
+class FormTowController extends GetxController {
   List<List<String>> tableData = List.generate(
-    4, (rowIndex) => List.generate(
-    18, (colIndex) => '',
-  ),
+    4,
+    (rowIndex) => List.generate(
+      18,
+      (colIndex) => '',
+    ),
   );
   updateData(int rowIndex, int colIndex, String value) {
     tableData[rowIndex][colIndex] = value;
@@ -128,6 +130,4 @@ class FormTowController extends GetxController{
   TextEditingController cell82 = TextEditingController();
   TextEditingController cell83 = TextEditingController();
   TextEditingController cell84 = TextEditingController();
-
-
 }
