@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       builder: (context, child) {
         return ResponsiveWrapper.builder(
           ClampingScrollWrapper.builder(context, child!),
