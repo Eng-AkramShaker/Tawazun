@@ -4134,7 +4134,7 @@ class form_F011 extends StatelessWidget {
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Text(
-                                        'Precautions: ',
+                                        'Precautions:   ',
                                         style:
                                             TextStyle(fontSize: 1 * w * 0.01),
                                       ),
@@ -4169,7 +4169,7 @@ class form_F011 extends StatelessWidget {
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Text(
-                                        'Frequency & Number of Sessions: ',
+                                        'Frequency & Number of Sessions:   ',
                                         style:
                                             TextStyle(fontSize: 1 * w * 0.01),
                                       ),
@@ -4204,7 +4204,7 @@ class form_F011 extends StatelessWidget {
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Text(
-                                        'Patient & Family Education/Home Education:',
+                                        'Patient & Family Education/Home Education:   ',
                                         style:
                                             TextStyle(fontSize: 1 * w * 0.01),
                                       ),
@@ -4239,7 +4239,7 @@ class form_F011 extends StatelessWidget {
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Text(
-                                        'Assistive Device:',
+                                        'Assistive Device:   ',
                                         style:
                                             TextStyle(fontSize: 1 * w * 0.01),
                                       ),
@@ -4274,7 +4274,7 @@ class form_F011 extends StatelessWidget {
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Text(
-                                        'Prostheses & Orthoses:',
+                                        'Prostheses & Orthoses:   ',
                                         style:
                                             TextStyle(fontSize: 1 * w * 0.01),
                                       ),
@@ -4311,12 +4311,12 @@ class form_F011 extends StatelessWidget {
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Text(
-                                        'Reassessment:',
+                                        'Reassessment:   ',
                                         style:
                                             TextStyle(fontSize: 1 * w * 0.01),
                                       ),
                                       C_TextField(
-                                          TEXT_controller: ctrl.Reassessment)
+                                          TEXT_controller: ctrl.Reassessment_1)
                                     ],
                                   ),
                                 ),

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class C_TextFild_3 extends StatelessWidget {
   C_TextFild_3({super.key, required this.TEXT_controller});
 
-  dynamic TEXT_controller = TextEditingController();
+  TextEditingController TEXT_controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
